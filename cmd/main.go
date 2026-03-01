@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"os"
 	"strings"
-	"io"
 
 	p "github.com/maxvanasten/gscp/parser"
 )
@@ -27,7 +27,6 @@ type FunctionCall struct {
 type Output struct {
 	FunctionSignatures  []FunctionSignature
 	FunctionCalls       []FunctionCall
-	VariableAssignments []string
 }
 
 func main() {
