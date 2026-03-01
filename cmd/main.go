@@ -61,7 +61,7 @@ func main() {
 
 	switch flag {
 	case "-f":
-		for _, f := range GetAllFunctions(ast.Nodes) {
+		for _, f := range GetAllUniqueFunctions(ast.Nodes, make(map[string]bool)) {
 			switch f.Type {
 			case "function_call":
 				output.FunctionCalls = append(output.FunctionCalls, Function{f.Data.FunctionName, ArgumentStrings(f.Children)})
@@ -105,7 +105,7 @@ func ArgumentStrings(arguments []p.Node) []string {
 	return output
 }
 
-func GetAllFunctions(nodes []p.Node) []p.Node {
+func GetAllUniqueFunctions(nodes []p.Node, seen map[string]bool) []p.Node {
 	functionNames := make(map[string]bool)
 	result := []p.Node{}
 
@@ -117,7 +117,7 @@ func GetAllFunctions(nodes []p.Node) []p.Node {
 			}
 		}
 		if len(node.Children) > 0 {
-			result = append(result, GetAllFunctions(node.Children)...)
+			result = append(result, GetAllUniqueFunctions(node.Children, functionNames)...)
 		}
 	}
 
