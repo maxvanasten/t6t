@@ -1,1 +1,5527 @@
-{"FunctionSignatures":[{"Name":"init_capture_zones","Arguments":[]},{"Name":"precache_everything","Arguments":[]},{"Name":"declare_objectives","Arguments":[]},{"Name":"init_pap_animtree","Arguments":[]},{"Name":"setup_capture_zones","Arguments":[]},{"Name":"all_zones_captured_vo","Arguments":[]},{"Name":"get_closest_player_to_richtofen","Arguments":[]},{"Name":"get_player_named","Arguments":["str_character_name"]},{"Name":"quick_revive_game_type_watcher","Arguments":[]},{"Name":"quick_revive_solo_leave_watcher","Arguments":[]},{"Name":"revive_perk_fx_think","Arguments":[]},{"Name":"setup_inaccessible_zombie_attack_points","Arguments":[]},{"Name":"set_attack_point_as_inaccessible","Arguments":["str_zone","n_index"]},{"Name":"setup_perk_machines_not_controlled_by_zone_capture","Arguments":[]},{"Name":"track_max_player_zombie_points","Arguments":[]},{"Name":"pack_a_punch_dummy_init","Arguments":[]},{"Name":"pack_a_punch_init","Arguments":[]},{"Name":"pack_a_punch_think","Arguments":[]},{"Name":"pack_a_punch_enable","Arguments":[]},{"Name":"pack_a_punch_disable","Arguments":[]},{"Name":"register_elements_powered_by_zone_capture_generators","Arguments":[]},{"Name":"register_perk_machine_for_zone","Arguments":["str_zone_name","str_perk_name","str_machine_targetname","func_perk_fx_think"]},{"Name":"register_random_perk_machine_for_zone","Arguments":["str_zone_name","str_identifier"]},{"Name":"register_mystery_box_for_zone","Arguments":["str_zone_name","str_identifier"]},{"Name":"get_mystery_box_from_script_noteworthy","Arguments":["str_script_noteworthy"]},{"Name":"enable_perk_machines_in_zone","Arguments":[]},{"Name":"disable_perk_machines_in_zone","Arguments":[]},{"Name":"enable_random_perk_machines_in_zone","Arguments":[]},{"Name":"disable_random_perk_machines_in_zone","Arguments":[]},{"Name":"enable_mystery_boxes_in_zone","Arguments":[]},{"Name":"disable_mystery_boxes_in_zone","Arguments":[]},{"Name":"get_perk_machine_trigger_from_vending_entity","Arguments":["str_vending_machine_targetname"]},{"Name":"check_perk_machine_valid","Arguments":["player"]},{"Name":"init_capture_zone","Arguments":[]},{"Name":"setup_generator_unitrigger","Arguments":[]},{"Name":"generator_trigger_prompt_and_visibility","Arguments":["e_player"]},{"Name":"generator_unitrigger_think","Arguments":[]},{"Name":"setup_zombie_attack_points","Arguments":[]},{"Name":"add_attack_points_from_anchor_origin","Arguments":["v_origin","n_start_index","n_scale"]},{"Name":"init_attack_point","Arguments":["v_origin","v_center_pillar"]},{"Name":"wait_for_capture_trigger","Arguments":[]},{"Name":"refund_generator_cost_if_player_captured_it","Arguments":["e_player"]},{"Name":"get_generator_capture_start_cost","Arguments":[]},{"Name":"capture_event_handle_ai_limit","Arguments":[]},{"Name":"get_zombie_to_delete","Arguments":[]},{"Name":"delete_zombie_for_capture_event","Arguments":[]},{"Name":"calculate_capture_event_zombies_needed","Arguments":[]},{"Name":"get_capture_zombies_needed","Arguments":["b_per_zone"]},{"Name":"set_capture_zombies_needed_per_zone","Arguments":[]},{"Name":"get_recapture_zombies_needed","Arguments":[]},{"Name":"activate_capture_zone","Arguments":["b_show_emergence_holes"]},{"Name":"show_emergence_holes","Arguments":["b_show_emergence_holes"]},{"Name":"destroy_emergence_holes","Arguments":[]},{"Name":"delete_self_after_time","Arguments":["n_time"]},{"Name":"monitor_capture_zombies","Arguments":[]},{"Name":"monitor_recapture_zombies","Arguments":[]},{"Name":"play_vo_when_generator_is_attacked","Arguments":[]},{"Name":"get_emergence_hole_spawn_point","Arguments":[]},{"Name":"get_unused_emergence_hole_spawn_point","Arguments":[]},{"Name":"emergence_hole_spawn","Arguments":[]},{"Name":"init_zone_capture_zombie_common","Arguments":["s_spawn_point"]},{"Name":"init_anim_rate","Arguments":[]},{"Name":"zone_capture_gib_think","Arguments":["refs","point","weaponname"]},{"Name":"init_capture_zombie","Arguments":["zone_struct","s_spawn_point"]},{"Name":"init_recapture_zombie","Arguments":["zone_struct","s_spawn_point"]},{"Name":"capture_zombie_rise_fx","Arguments":["ai_zombie"]},{"Name":"get_unclaimed_attack_point","Arguments":["s_zone"]},{"Name":"clean_up_unused_attack_points","Arguments":[]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["n_start","n_end"]},{"Name":"get_claimed_attack_points_between_indicies","Arguments":["n_start","n_end"]},{"Name":"unclaim_attacking_point","Arguments":[]},{"Name":"clear_all_zombie_attack_points_in_zone","Arguments":[]},{"Name":"capture_zombies_only_attack_nearby_players","Arguments":["s_zone"]},{"Name":"cancel_generator_attack_if_player_gets_close_to_generator","Arguments":["s_zone"]},{"Name":"should_capture_zombie_attack_generator","Arguments":["s_zone"]},{"Name":"play_melee_attack_animation","Arguments":[]},{"Name":"recapture_zombie_poi_think","Arguments":[]},{"Name":"kill_all_capture_zombies","Arguments":[]},{"Name":"kill_all_recapture_zombies","Arguments":[]},{"Name":"is_capture_area_occupied","Arguments":["parent_zone"]},{"Name":"set_player_controlled_area","Arguments":[]},{"Name":"update_captured_zone_count","Arguments":[]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"get_contested_zone_count","Arguments":[]},{"Name":"get_contested_zones","Arguments":[]},{"Name":"set_player_controlled_zone","Arguments":[]},{"Name":"set_zombie_controlled_area","Arguments":["b_is_level_initializing"]},{"Name":"play_pap_anim","Arguments":["b_assemble"]},{"Name":"set_zombie_controlled_zone","Arguments":["b_is_level_initializing"]},{"Name":"capture_progress_think","Arguments":[]},{"Name":"update_objective_on_momentum_change","Arguments":[]},{"Name":"get_zone_objective_index","Arguments":[]},{"Name":"get_zones_using_objective_index","Arguments":["n_index"]},{"Name":"zone_capture_sound_state_think","Arguments":[]},{"Name":"handle_generator_capture","Arguments":[]},{"Name":"init_capture_progress","Arguments":[]},{"Name":"get_progress_rate","Arguments":["n_players_in_zone","n_players_total"]},{"Name":"show_zone_capture_objective","Arguments":["b_show_objective"]},{"Name":"clear_zone_objective_index","Arguments":[]},{"Name":"hide_zone_objective_while_recapture_group_runs_to_next_generator","Arguments":["b_hide_icon"]},{"Name":"recapture_zombie_group_icon_show","Arguments":[]},{"Name":"recapture_zombie_icon_think","Arguments":[]},{"Name":"recapture_zombie_group_icon_hide","Arguments":[]},{"Name":"players_capture_zone","Arguments":[]},{"Name":"reward_players_in_capture_zone","Arguments":[]},{"Name":"show_zone_capture_debug_info","Arguments":[]},{"Name":"get_players_in_capture_zone","Arguments":[]},{"Name":"get_update_rate","Arguments":["n_duration"]},{"Name":"generator_set_state","Arguments":[]},{"Name":"generator_state_turn_on","Arguments":[]},{"Name":"generator_state_power_up","Arguments":[]},{"Name":"generator_state_power_down","Arguments":[]},{"Name":"generator_state_turn_off","Arguments":[]},{"Name":"generator_turns_off_after_anim","Arguments":[]},{"Name":"generator_state_off","Arguments":[]},{"Name":"can_start_generator_power_up_anim","Arguments":[]},{"Name":"get_recapture_attacker_count","Arguments":[]},{"Name":"watch_for_open_sesame","Arguments":[]},{"Name":"debug_watch_for_zone_capture","Arguments":[]},{"Name":"debug_watch_for_zone_recapture","Arguments":[]},{"Name":"debug_set_generator_active","Arguments":[]},{"Name":"debug_set_generator_inactive","Arguments":[]},{"Name":"set_magic_box_zbarrier_state","Arguments":["state"]},{"Name":"magic_box_trigger_update_prompt","Arguments":["player"]},{"Name":"magic_box_stub_update_prompt","Arguments":["player"]},{"Name":"recapture_round_tracker","Arguments":[]},{"Name":"get_player_controlled_zone_count_for_recapture","Arguments":[]},{"Name":"get_recapture_zone","Arguments":["s_last_recapture_zone"]},{"Name":"recapture_round_start","Arguments":[]},{"Name":"broadcast_vo_category_to_team","Arguments":["str_category","n_delay"]},{"Name":"get_players_too_far_to_hear","Arguments":["a_players"]},{"Name":"get_random_speaker","Arguments":["a_players"]},{"Name":"set_recapture_zombie_attack_target","Arguments":["s_recapture_target_zone"]},{"Name":"sndrecaptureroundloop","Arguments":[]},{"Name":"sndrecaptureroundloop_stop","Arguments":[]},{"Name":"monitor_recapture_zombie_count","Arguments":[]},{"Name":"recapture_zombie_death_func","Arguments":[]},{"Name":"drop_max_ammo_at_death_location","Arguments":[]},{"Name":"generator_under_attack_warnings","Arguments":[]},{"Name":"play_flare_effect","Arguments":[]},{"Name":"recapture_round_audio_starts","Arguments":[]},{"Name":"recapture_round_audio_ends","Arguments":[]},{"Name":"custom_vending_power_on","Arguments":[]},{"Name":"custom_vending_power_off","Arguments":[]},{"Name":"generator_initiated_vo","Arguments":[]},{"Name":"zone_capture_complete_vo","Arguments":[]},{"Name":"generator_interrupted_vo","Arguments":[]},{"Name":"generator_compromised_vo","Arguments":[]},{"Name":"generator_deactivated_vo","Arguments":[]},{"Name":"sndplaygeneratormusicstinger","Arguments":[]}],"FunctionCalls":[{"Name":"#using_animtree","Arguments":["\"fxanim_props_dlc4\""]},{"Name":"capture_zone_init_start","Arguments":[]},{"Name":"precache_everything","Arguments":[]},{"Name":"declare_objectives","Arguments":[]},{"Name":"flag_init","Arguments":["\"zone_capture_in_progress\""]},{"Name":"flag_init","Arguments":["\"recapture_event_in_progress\""]},{"Name":"flag_init","Arguments":["\"capture_zones_init_done\""]},{"Name":"flag_init","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"flag_init","Arguments":["\"generator_under_attack\""]},{"Name":"flag_init","Arguments":["\"all_zones_captured\""]},{"Name":"flag_init","Arguments":["\"generator_lost_to_recapture_zombies\""]},{"Name":"setup_capture_zones","Arguments":[]},{"Name":"precachemodel","Arguments":["\"p6_zm_tm_zone_capture_hole\""]},{"Name":"precachemodel","Arguments":["\"p6_zm_tm_packapunch\""]},{"Name":"precacherumble","Arguments":["\"generator_active\""]},{"Name":"precachestring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"precachestring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"precachestring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"precachestring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"precachestring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"objective_add","Arguments":["0","\"invisible\"","\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"objective_add","Arguments":["1","\"invisible\"","\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"objective_add","Arguments":["2","\"invisible\"","\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"objective_add","Arguments":["3","\"invisible\"","\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"scriptmodelsuseanimtree","Arguments":["#animtree"]},{"Name":"getent","Arguments":["\"capture_zombie_spawner\"","\"targetname\""]},{"Name":"add_spawn_function","Arguments":["::capture_zombie_spawn_init"]},{"Name":"getstructarray","Arguments":["\"s_generator\"","\"targetname\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\"packapunch_anim\"","14000","3","\"int\""]},{"Name":"registerclientfield","Arguments":["\"actor\"","\"zone_capture_zombie\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"scriptmover\"","\"zone_capture_emergence_hole\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\"zc_change_progress_bar_color\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\"zone_capture_hud_all_generators_captured\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\"zone_capture_perk_machine_smoke_fx_always_on\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\"pap_monolith_ring_shake\"","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","struct.script_noteworthy","14000","7","\"float\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\u003c\u003c\u003cexpression\u003e\u003e\u003e","14000","3","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\u003c\u003c\u003cexpression\u003e\u003e\u003e","14000","2","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\u003c\u003c\u003cexpression\u003e\u003e\u003e","14000","1","\"int\""]},{"Name":"registerclientfield","Arguments":["\"world\"","\u003c\u003c\u003cexpression\u003e\u003e\u003e","14000","1","\"int\""]},{"Name":"flag_wait","Arguments":["\"start_zombie_round_logic\""]},{"Name":"track_max_player_zombie_points","Arguments":[]},{"Name":"init_capture_zone","Arguments":[]},{"Name":"register_elements_powered_by_zone_capture_generators","Arguments":[]},{"Name":"setup_perk_machines_not_controlled_by_zone_capture","Arguments":[]},{"Name":"pack_a_punch_init","Arguments":[]},{"Name":"recapture_round_tracker","Arguments":[]},{"Name":"register_zombie_death_event_callback","Arguments":["::recapture_zombie_death_func"]},{"Name":"setup_inaccessible_zombie_attack_points","Arguments":[]},{"Name":"quick_revive_game_type_watcher","Arguments":[]},{"Name":"quick_revive_solo_leave_watcher","Arguments":[]},{"Name":"all_zones_captured_vo","Arguments":[]},{"Name":"flag_set","Arguments":["\"capture_zones_init_done\""]},{"Name":"setclientfield","Arguments":["\"zone_capture_perk_machine_smoke_fx_always_on\"","1"]},{"Name":"capture_zone_init_end","Arguments":[]},{"Name":"flag_wait","Arguments":["\"all_zones_captured\""]},{"Name":"flag_waitopen","Arguments":["\"story_vo_playing\""]},{"Name":"set_players_dontspeak","Arguments":["1"]},{"Name":"flag_set","Arguments":["\"story_vo_playing\""]},{"Name":"get_closest_player_to_richtofen","Arguments":[]},{"Name":"isdefined","Arguments":["e_speaker"]},{"Name":"set_player_dontspeak","Arguments":["0"]},{"Name":"create_and_play_dialog","Arguments":["\"zone_capture\"","\"all_generators_captured\""]},{"Name":"waittill_any","Arguments":["\"done_speaking\"","\"disconnect\""]},{"Name":"get_player_named","Arguments":["\"Richtofen\""]},{"Name":"isdefined","Arguments":["e_richtofen"]},{"Name":"set_player_dontspeak","Arguments":["0"]},{"Name":"create_and_play_dialog","Arguments":["\"zone_capture\"","\"all_generators_captured\""]},{"Name":"set_players_dontspeak","Arguments":["0"]},{"Name":"flag_clear","Arguments":["\"story_vo_playing\""]},{"Name":"get_players","Arguments":[]},{"Name":"get_player_named","Arguments":["\"Richtofen\""]},{"Name":"isdefined","Arguments":["e_richtofen"]},{"Name":"arrayremovevalue","Arguments":["a_players","e_richtofen","0"]},{"Name":"arraysort","Arguments":["a_players","e_richtofen.origin","1"]},{"Name":"get_random_speaker","Arguments":[]},{"Name":"get_players","Arguments":[]},{"Name":"isdefined","Arguments":["player.character_name"]},{"Name":"waittill","Arguments":["\"revive_hide\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"notify","Arguments":["\"revive_on\""]},{"Name":"reset_vending_hint_string","Arguments":[]},{"Name":"notify","Arguments":["\"revive_off\""]},{"Name":"sethintstring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"flag_exists","Arguments":["\"solo_revive\""]},{"Name":"flag_wait","Arguments":["\"solo_revive\""]},{"Name":"setclientfield","Arguments":["\"zone_capture_perk_machine_smoke_fx_1\"","0"]},{"Name":"flag_exists","Arguments":["\"solo_revive\""]},{"Name":"flag","Arguments":["\"solo_revive\""]},{"Name":"set_attack_point_as_inaccessible","Arguments":["\"generator_start_bunker\"","5"]},{"Name":"set_attack_point_as_inaccessible","Arguments":["\"generator_start_bunker\"","11"]},{"Name":"set_attack_point_as_inaccessible","Arguments":["\"generator_tank_trench\"","4"]},{"Name":"set_attack_point_as_inaccessible","Arguments":["\"generator_tank_trench\"","5"]},{"Name":"set_attack_point_as_inaccessible","Arguments":["\"generator_tank_trench\"","6"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"ent_flag_wait","Arguments":["\"zone_initialized\""]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones",".zombie_attack_points"]},{"Name":"array","Arguments":["\"specialty_additionalprimaryweapon\""]},{"Name":"get_players","Arguments":[]},{"Name":"waittill","Arguments":["\"between_round_over\""]},{"Name":"getentarray","Arguments":["\"specialty_weapupgrade\"","\"script_noteworthy\""]},{"Name":"getent","Arguments":["\"specialty_weapupgrade\"","\"script_noteworthy\""]},{"Name":"ghost","Arguments":[]},{"Name":"notsolid","Arguments":[]},{"Name":"enablelinkto","Arguments":[]},{"Name":"linkto","Arguments":["t_pap"]},{"Name":"pack_a_punch_think","Arguments":[]},{"Name":"flag_wait","Arguments":["\"all_zones_captured\""]},{"Name":"pack_a_punch_enable","Arguments":[]},{"Name":"flag_waitopen","Arguments":["\"all_zones_captured\""]},{"Name":"pack_a_punch_disable","Arguments":[]},{"Name":"getent","Arguments":["\"specialty_weapupgrade\"","\"script_noteworthy\""]},{"Name":"trigger_on","Arguments":[]},{"Name":"flag_set","Arguments":["\"power_on\""]},{"Name":"setclientfield","Arguments":["\"zone_capture_hud_all_generators_captured\"","1"]},{"Name":"flag","Arguments":["\"generator_lost_to_recapture_zombies\""]},{"Name":"notify","Arguments":["\"all_zones_captured_none_lost\""]},{"Name":"getent","Arguments":["\"specialty_weapupgrade\"","\"script_noteworthy\""]},{"Name":"setclientfield","Arguments":["\"zone_capture_hud_all_generators_captured\"","0"]},{"Name":"flag_waitopen","Arguments":["\"pack_machine_in_use\""]},{"Name":"trigger_off","Arguments":[]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_start_bunker\"","\"starting_bunker\""]},{"Name":"register_perk_machine_for_zone","Arguments":["\"generator_start_bunker\"","\"revive\"","\"vending_revive\"","::revive_perk_fx_think"]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_start_bunker\"","\"bunker_start_chest\""]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_tank_trench\"","\"trenches_right\""]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_tank_trench\"","\"bunker_tank_chest\""]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_mid_trench\"","\"trenches_left\""]},{"Name":"register_perk_machine_for_zone","Arguments":["\"generator_mid_trench\"","\"sleight\"","\"vending_sleight\""]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_mid_trench\"","\"bunker_cp_chest\""]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_nml_right\"","\"nml\""]},{"Name":"register_perk_machine_for_zone","Arguments":["\"generator_nml_right\"","\"juggernog\"","\"vending_jugg\""]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_nml_right\"","\"nml_open_chest\""]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_nml_left\"","\"farmhouse\""]},{"Name":"register_perk_machine_for_zone","Arguments":["\"generator_nml_left\"","\"marathon\"","\"vending_marathon\""]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_nml_left\"","\"nml_farm_chest\""]},{"Name":"register_random_perk_machine_for_zone","Arguments":["\"generator_church\"","\"church\""]},{"Name":"register_mystery_box_for_zone","Arguments":["\"generator_church\"","\"village_church_chest\""]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones",".perk_machines"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones",".perk_machines"]},{"Name":"get_perk_machine_trigger_from_vending_entity","Arguments":["str_machine_targetname"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones",".perk_machines_random"]},{"Name":"getentarray","Arguments":["\"random_perk_machine\"","\"targetname\""]},{"Name":"isdefined","Arguments":["random_perk_machine.script_string"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones",".mystery_boxes"]},{"Name":"get_mystery_box_from_script_noteworthy","Arguments":["str_identifier"]},{"Name":"isdefined","Arguments":["s_mystery_box.script_noteworthy"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["s_mystery_box"]},{"Name":"isdefined","Arguments":["self.perk_machines"]},{"Name":"isarray","Arguments":["self.perk_machines"]},{"Name":"getarraykeys","Arguments":["self.perk_machines"]},{"Name":"notify","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"reset_vending_hint_string","Arguments":[]},{"Name":"isdefined","Arguments":["self.perk_machines"]},{"Name":"isarray","Arguments":["self.perk_machines"]},{"Name":"getarraykeys","Arguments":["self.perk_machines"]},{"Name":"notify","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"sethintstring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["self.perk_machines_random"]},{"Name":"isarray","Arguments":["self.perk_machines_random"]},{"Name":"sethintstring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e","level._random_zombie_perk_cost"]},{"Name":"isdefined","Arguments":["self.perk_machines_random"]},{"Name":"isarray","Arguments":["self.perk_machines_random"]},{"Name":"set_magic_box_zbarrier_state","Arguments":["\"player_controlled\""]},{"Name":"setclientfield","Arguments":["\"magicbox_runes\"","1"]},{"Name":"set_magic_box_zbarrier_state","Arguments":["\"zombie_controlled\""]},{"Name":"setclientfield","Arguments":["\"magicbox_runes\"","0"]},{"Name":"getent","Arguments":["str_vending_machine_targetname","\"target\""]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["e_trigger"]},{"Name":"isdefined","Arguments":["self.script_noteworthy"]},{"Name":"isinarray","Arguments":["level.zone_capture.perk_machines_always_on","self.script_noteworthy"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\"str_zone_name field missing on perk machine! This is required by the zone capture system!\""]},{"Name":"isdefined","Arguments":["self.str_zone_name"]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"create_and_play_dialog","Arguments":["\"lockdown\"","\"power_off\""]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\"capture zone struct is missing script_noteworthy KVP! This is required for init_capture_zone()\""]},{"Name":"isdefined","Arguments":["self.script_noteworthy"]},{"Name":"isdefined","Arguments":["level.zone_capture"]},{"Name":"spawnstruct","Arguments":[]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["level.zone_capture.zones"]},{"Name":"setup_generator_unitrigger","Arguments":[]},{"Name":"get_zone_from_position","Arguments":["self.origin","1"]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"isdefined","Arguments":["self.script_int"]},{"Name":"ent_flag_init","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"ent_flag_init","Arguments":["\"current_recapture_target_zone\""]},{"Name":"ent_flag_init","Arguments":["\"player_controlled\""]},{"Name":"ent_flag_init","Arguments":["\"zone_contested\""]},{"Name":"ent_flag_init","Arguments":["\"zone_initialized\""]},{"Name":"set_zombie_controlled_area","Arguments":["1"]},{"Name":"setup_zombie_attack_points","Arguments":[]},{"Name":"ent_flag_set","Arguments":["\"zone_initialized\""]},{"Name":"wait_for_capture_trigger","Arguments":[]},{"Name":"spawnstruct","Arguments":[]},{"Name":"unitrigger_force_per_player_triggers","Arguments":["s_unitrigger_stub","1"]},{"Name":"register_static_unitrigger","Arguments":["s_unitrigger_stub","::generator_unitrigger_think"]},{"Name":"ent_flag","Arguments":["\"zone_contested\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"flag","Arguments":["\"zone_capture_in_progress\""]},{"Name":"sethintstring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"sethintstring","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e","\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"get_generator_capture_start_cost","Arguments":[]},{"Name":"setinvisibletoplayer","Arguments":["e_player","\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"endon","Arguments":["\"kill_trigger\""]},{"Name":"waittill","Arguments":["\"trigger\"","e_player"]},{"Name":"is_player_valid","Arguments":["e_player"]},{"Name":"is_reviving_any","Arguments":[]},{"Name":"get_generator_capture_start_cost","Arguments":[]},{"Name":"create_and_play_dialog","Arguments":["\"general\"","\"no_money_capture\""]},{"Name":"flag","Arguments":["\"zone_capture_in_progress\""]},{"Name":"setinvisibletoall","Arguments":[]},{"Name":"notify","Arguments":["\"start_generator_capture\"","e_player"]},{"Name":"anglestoright","Arguments":["self.angles"]},{"Name":"add_attack_points_from_anchor_origin","Arguments":["self.origin","0","52"]},{"Name":"add_attack_points_from_anchor_origin","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","4","32"]},{"Name":"add_attack_points_from_anchor_origin","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","8","32"]},{"Name":"anglestoforward","Arguments":["self.angles"]},{"Name":"anglestoright","Arguments":["self.angles"]},{"Name":"init_attack_point","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","v_origin"]},{"Name":"init_attack_point","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","v_origin"]},{"Name":"init_attack_point","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","v_origin"]},{"Name":"init_attack_point","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","v_origin"]},{"Name":"spawnstruct","Arguments":[]},{"Name":"waittill","Arguments":["\"start_generator_capture\"","e_player"]},{"Name":"flag","Arguments":["\"zone_capture_in_progress\""]},{"Name":"flag_set","Arguments":["\"zone_capture_in_progress\""]},{"Name":"get_generator_capture_start_cost","Arguments":[]},{"Name":"minus_to_player_score","Arguments":["self.generator_cost"]},{"Name":"delay_thread","Arguments":["2.5","::create_and_play_dialog","\"zone_capture\"","\"capture_started\""]},{"Name":"capture_event_start","Arguments":[]},{"Name":"monitor_capture_zombies","Arguments":[]},{"Name":"activate_capture_zone","Arguments":[]},{"Name":"ent_flag_wait","Arguments":["\"zone_contested\""]},{"Name":"capture_event_handle_ai_limit","Arguments":[]},{"Name":"ent_flag_waitopen","Arguments":["\"zone_contested\""]},{"Name":"capture_event_end","Arguments":[]},{"Name":"isdefined","Arguments":["e_player"]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"refund_generator_cost_if_player_captured_it","Arguments":["e_player"]},{"Name":"flag_wait","Arguments":["\"zone_capture_in_progress\""]},{"Name":"flag_waitopen","Arguments":["\"zone_capture_in_progress\""]},{"Name":"capture_event_handle_ai_limit","Arguments":[]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"ent_flag_waitopen","Arguments":["\"player_controlled\""]},{"Name":"isinarray","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","e_player"]},{"Name":"get_players_in_capture_zone","Arguments":[]},{"Name":"add_to_player_score","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"int","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"get_players","Arguments":[]},{"Name":"calculate_capture_event_zombies_needed","Arguments":[]},{"Name":"get_current_zombie_count","Arguments":[]},{"Name":"get_zombie_to_delete","Arguments":[]},{"Name":"isdefined","Arguments":["ai_zombie"]},{"Name":"delete_zombie_for_capture_event","Arguments":[]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"get_round_enemy_array","Arguments":[]},{"Name":"random","Arguments":["a_zombies"]},{"Name":"isdefined","Arguments":["self"]},{"Name":"playfx","Arguments":["level._effect","self.origin"]},{"Name":"ghost","Arguments":[]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"isdefined","Arguments":["self"]},{"Name":"delete","Arguments":[]},{"Name":"get_capture_zombies_needed","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"get_recapture_zombies_needed","Arguments":[]},{"Name":"isdefined","Arguments":["b_per_zone"]},{"Name":"get_contested_zones","Arguments":[]},{"Name":"get_contested_zones","Arguments":[]},{"Name":"get_capture_zombies_needed","Arguments":["1"]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"isdefined","Arguments":["b_show_emergence_holes"]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"generator_initiated_vo","Arguments":[]},{"Name":"getstructarray","Arguments":["self.target","\"targetname\""]},{"Name":"show_emergence_holes","Arguments":["b_show_emergence_holes"]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"flag_wait_any","Arguments":["\"generator_under_attack\"","\"recapture_zombies_cleared\""]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"capture_progress_think","Arguments":[]},{"Name":"destroy_emergence_holes","Arguments":[]},{"Name":"destroy_emergence_holes","Arguments":[]},{"Name":"emergence_hole_spawn","Arguments":[]},{"Name":"isdefined","Arguments":["self.a_emergence_holes"]},{"Name":"isdefined","Arguments":["m_emergence_hole"]},{"Name":"setclientfield","Arguments":["\"zone_capture_emergence_hole\"","0"]},{"Name":"ghost","Arguments":[]},{"Name":"delete_self_after_time","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"randomfloatrange","Arguments":["0.5","2.0"]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"wait","Arguments":["n_time"]},{"Name":"isdefined","Arguments":["self"]},{"Name":"delete","Arguments":[]},{"Name":"ent_flag_wait","Arguments":["\"zone_contested\""]},{"Name":"getent","Arguments":["\"capture_zombie_spawner\"","\"targetname\""]},{"Name":"set_capture_zombies_needed_per_zone","Arguments":[]},{"Name":"ent_flag","Arguments":["\"zone_contested\""]},{"Name":"array_removedead","Arguments":["self.capture_zombies"]},{"Name":"spawn_zombie","Arguments":["e_spawner_capture_zombie"]},{"Name":"get_emergence_hole_spawn_point","Arguments":[]},{"Name":"getent","Arguments":["\"capture_zombie_spawner\"","\"targetname\""]},{"Name":"get_recapture_zombies_needed","Arguments":[]},{"Name":"play_vo_when_generator_is_attacked","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"array_removedead","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"spawn_zombie","Arguments":["e_spawner_capture_zombie"]},{"Name":"get_emergence_hole_spawn_point","Arguments":[]},{"Name":"monitor_recapture_zombie_count","Arguments":[]},{"Name":"endon","Arguments":["\"zone_contested\""]},{"Name":"endon","Arguments":["\"recapture_event_in_progress\""]},{"Name":"waittill","Arguments":["\"zombies_attacking_generator\""]},{"Name":"broadcast_vo_category_to_team","Arguments":["\"recapture_generator_attacked\"","3.5"]},{"Name":"isdefined","Arguments":["self.a_emergence_hole_structs"]},{"Name":"get_unused_emergence_hole_spawn_point","Arguments":[]},{"Name":"getstructarray","Arguments":["self.target","\"targetname\""]},{"Name":"isdefined","Arguments":["s_emergence_hole.spawned_zombie"]},{"Name":"random","Arguments":["a_valid_spawn_points"]},{"Name":"spawn","Arguments":["\"script_model\"","self.origin"]},{"Name":"setmodel","Arguments":["\"p6_zm_tm_zone_capture_hole\""]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"setclientfield","Arguments":["\"zone_capture_emergence_hole\"","1"]},{"Name":"setphysparams","Arguments":["15","0","72"]},{"Name":"dug_zombie_rise","Arguments":["s_spawn_point"]},{"Name":"playsound","Arguments":["\"zmb_vocals_capzomb_spawn\""]},{"Name":"setclientfield","Arguments":["\"zone_capture_zombie\"","1"]},{"Name":"init_anim_rate","Arguments":[]},{"Name":"setclientfield","Arguments":["\"anim_rate\"","1"]},{"Name":"getclientfield","Arguments":["\"anim_rate\""]},{"Name":"setentityanimrate","Arguments":["n_rate"]},{"Name":"isdefined","Arguments":["self.is_recapture_zombie"]},{"Name":"arrayremovevalue","Arguments":["refs","\"right_leg\"","0"]},{"Name":"arrayremovevalue","Arguments":["refs","\"left_leg\"","0"]},{"Name":"arrayremovevalue","Arguments":["refs","\"no_legs\"","0"]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"init_zone_capture_zombie_common","Arguments":["s_spawn_point"]},{"Name":"isdefined","Arguments":["self.zombie_move_speed"]},{"Name":"set_zombie_run_cycle","Arguments":["\"run\""]},{"Name":"find_flesh","Arguments":[]},{"Name":"notify","Arguments":["\"zombie_custom_think_done\"","find_flesh_struct_string"]},{"Name":"capture_zombies_only_attack_nearby_players","Arguments":["zone_struct"]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"init_zone_capture_zombie_common","Arguments":["s_spawn_point"]},{"Name":"recapture_zombie_poi_think","Arguments":[]},{"Name":"isdefined","Arguments":["self.attacking_point"]},{"Name":"isdefined","Arguments":["self.attacking_point"]},{"Name":"unclaim_attacking_point","Arguments":[]},{"Name":"get_unclaimed_attack_point","Arguments":["self.s_attack_generator"]},{"Name":"setgoalpos","Arguments":["v_attack_origin"]},{"Name":"waittill_either","Arguments":["\"goal\"","\"poi_state_changed\""]},{"Name":"distance","Arguments":["self.attacking_point.origin","self.origin"]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_target"]},{"Name":"isdefined","Arguments":["self.s_attack_generator.script_noteworthy"]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_target"]},{"Name":"isdefined","Arguments":["self.s_attack_generator.script_noteworthy"]},{"Name":"flag_set","Arguments":["\"generator_under_attack\""]},{"Name":"ent_flag_set","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"notify","Arguments":["\"zombies_attacking_generator\""]},{"Name":"isdefined","Arguments":["self.attacking_point"]},{"Name":"unclaim_attacking_point","Arguments":[]},{"Name":"play_melee_attack_animation","Arguments":[]},{"Name":"playfx","Arguments":["level._effect","self.origin","\u003c\u003c\u003cfunction_call\u003e\u003e\u003e","\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"anglestoforward","Arguments":["self.angles"]},{"Name":"anglestoup","Arguments":["self.angles"]},{"Name":"clean_up_unused_attack_points","Arguments":[]},{"Name":"get_claimed_attack_points_between_indicies","Arguments":["0","3"]},{"Name":"get_claimed_attack_points_between_indicies","Arguments":["4","7"]},{"Name":"get_claimed_attack_points_between_indicies","Arguments":["8","11"]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["0","3"]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["4","7"]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["8","11"]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["0","11"]},{"Name":"get_unclaimed_attack_points_between_indicies","Arguments":["0","11"]},{"Name":"assert","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"random","Arguments":["a_valid_attack_points"]},{"Name":"isdefined","Arguments":["s_attack_point.claimed_by"]},{"Name":"unclaim_attacking_point","Arguments":[]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"should_capture_zombie_attack_generator","Arguments":["s_zone"]},{"Name":"notify","Arguments":["\"stop_find_flesh\""]},{"Name":"notify","Arguments":["\"zombie_acquire_enemy\""]},{"Name":"isdefined","Arguments":["self.attacking_point"]},{"Name":"get_unclaimed_attack_point","Arguments":["s_zone"]},{"Name":"setgoalpos","Arguments":["self.attacking_point.origin"]},{"Name":"cancel_generator_attack_if_player_gets_close_to_generator","Arguments":["s_zone"]},{"Name":"waittill_any_return","Arguments":["\"goal\"","\"stop_attacking_generator\""]},{"Name":"isdefined","Arguments":["str_notify"]},{"Name":"isdefined","Arguments":["\"stop_attacking_generator\""]},{"Name":"isdefined","Arguments":["str_notify"]},{"Name":"isdefined","Arguments":["\"stop_attacking_generator\""]},{"Name":"unclaim_attacking_point","Arguments":[]},{"Name":"play_melee_attack_animation","Arguments":[]},{"Name":"notify","Arguments":["\"generator_attack_cancel_think\""]},{"Name":"endon","Arguments":["\"generator_attack_cancel_think\""]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"should_capture_zombie_attack_generator","Arguments":["s_zone"]},{"Name":"notify","Arguments":["\"stop_attacking_generator\""]},{"Name":"find_flesh","Arguments":[]},{"Name":"wait","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"randomfloatrange","Arguments":["0.2","1.5"]},{"Name":"get_players","Arguments":[]},{"Name":"arraysort","Arguments":["a_players","s_zone.origin","1","undefined","700"]},{"Name":"isdefined","Arguments":["self.ignore_player"]},{"Name":"isinarray","Arguments":["a_valid_targets","player"]},{"Name":"is_player_valid","Arguments":["player"]},{"Name":"isinarray","Arguments":["self.ignore_player","player"]},{"Name":"arrayremovevalue","Arguments":["self.ignore_player","player","0"]},{"Name":"isdefined","Arguments":["self.enemy"]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"endon","Arguments":["\"poi_state_changed\""]},{"Name":"isdefined","Arguments":["self.attacking_point"]},{"Name":"vectortoangles","Arguments":["\u003c\u003c\u003cvector_literal\u003e\u003e\u003e"]},{"Name":"animscripted","Arguments":["self.origin","v_angles","\"zm_generator_melee\""]},{"Name":"waittill","Arguments":["\"static_melee_anim\"","note"]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"isdefined","Arguments":["self"]},{"Name":"isalive","Arguments":["self"]},{"Name":"isdefined","Arguments":["level._poi_override"]},{"Name":"self","Arguments":[]},{"Name":"isdefined","Arguments":["zombie_poi"]},{"Name":"get_zombie_point_of_interest","Arguments":["self.origin"]},{"Name":"isdefined","Arguments":["zombie_poi"]},{"Name":"isarray","Arguments":["zombie_poi"]},{"Name":"isdefined","Arguments":["zombie_poi"]},{"Name":"notify","Arguments":["\"poi_state_changed\""]},{"Name":"stopanimscripted","Arguments":["0.2"]},{"Name":"isdefined","Arguments":["self.capture_zombies"]},{"Name":"isdefined","Arguments":["zombie"]},{"Name":"isalive","Arguments":["zombie"]},{"Name":"playfx","Arguments":["level._effect","zombie.origin"]},{"Name":"dodamage","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","zombie.origin"]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"array_removedead","Arguments":["self.capture_zombies"]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"isdefined","Arguments":["zombie"]},{"Name":"isalive","Arguments":["zombie"]},{"Name":"playfx","Arguments":["level._effect","zombie.origin"]},{"Name":"dodamage","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","zombie.origin"]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"array_removedead","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"set_player_controlled_zone","Arguments":[]},{"Name":"play_pap_anim","Arguments":["1"]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"flag_set","Arguments":["\"all_zones_captured\""]},{"Name":"flag_clear","Arguments":["\"all_zones_captured\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"get_contested_zones","Arguments":[]},{"Name":"ent_flag","Arguments":["\"zone_contested\""]},{"Name":"ent_flag_set","Arguments":["\"player_controlled\""]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","1"]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","0"]},{"Name":"isdefined","Arguments":["self.perk_fx_func"]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","1"]},{"Name":"ent_flag_set","Arguments":["\"player_controlled\""]},{"Name":"update_captured_zone_count","Arguments":[]},{"Name":"enable_perk_machines_in_zone","Arguments":[]},{"Name":"enable_random_perk_machines_in_zone","Arguments":[]},{"Name":"enable_mystery_boxes_in_zone","Arguments":[]},{"Name":"notify","Arguments":["\"zone_captured_by_player\"","self.str_zone"]},{"Name":"isdefined","Arguments":["b_is_level_initializing"]},{"Name":"update_captured_zone_count","Arguments":[]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","3"]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","0"]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"flag_set","Arguments":["\"generator_lost_to_recapture_zombies\""]},{"Name":"set_zombie_controlled_zone","Arguments":["b_is_level_initializing"]},{"Name":"play_pap_anim","Arguments":["0"]},{"Name":"setclientfield","Arguments":["\"packapunch_anim\"","\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"isdefined","Arguments":["b_is_level_initializing"]},{"Name":"ent_flag_clear","Arguments":["\"player_controlled\""]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","n_hud_state"]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","1"]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","0"]},{"Name":"update_captured_zone_count","Arguments":[]},{"Name":"disable_perk_machines_in_zone","Arguments":[]},{"Name":"disable_random_perk_machines_in_zone","Arguments":[]},{"Name":"disable_mystery_boxes_in_zone","Arguments":[]},{"Name":"init_capture_progress","Arguments":[]},{"Name":"clear_zone_objective_index","Arguments":[]},{"Name":"show_zone_capture_objective","Arguments":["1"]},{"Name":"get_zone_objective_index","Arguments":[]},{"Name":"ent_flag","Arguments":["\"zone_contested\""]},{"Name":"get_players","Arguments":[]},{"Name":"get_players_in_capture_zone","Arguments":[]},{"Name":"isinarray","Arguments":["a_players_in_capture_zone","player"]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"objective_setplayerusing","Arguments":["self.n_objective_index","player"]},{"Name":"is_player_valid","Arguments":["player"]},{"Name":"objective_clearplayerusing","Arguments":["self.n_objective_index","player"]},{"Name":"get_progress_rate","Arguments":["a_players_in_capture_zone.size","a_players.size"]},{"Name":"clamp","Arguments":["self.n_current_progress","0","100"]},{"Name":"objective_setprogress","Arguments":["self.n_objective_index","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"zone_capture_sound_state_think","Arguments":[]},{"Name":"setclientfield","Arguments":["self.script_noteworthy","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"generator_set_state","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"setclientfield","Arguments":["\"zc_change_progress_bar_color\"","b_set_color_to_white"]},{"Name":"update_objective_on_momentum_change","Arguments":[]},{"Name":"ent_flag","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"ent_flag_clear","Arguments":["\"zone_contested\""]},{"Name":"show_zone_capture_debug_info","Arguments":[]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"handle_generator_capture","Arguments":[]},{"Name":"clear_all_zombie_attack_points_in_zone","Arguments":[]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"clear_zone_objective_index","Arguments":[]},{"Name":"show_zone_capture_objective","Arguments":["1"]},{"Name":"setclientfield","Arguments":["\"zc_change_progress_bar_color\"","1"]},{"Name":"isdefined","Arguments":["self.n_objective_index"]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"isdefined","Arguments":["zone.n_objective_index"]},{"Name":"isdefined","Arguments":["self.is_playing_audio"]},{"Name":"stoploopsound","Arguments":[]},{"Name":"flag","Arguments":["\"generator_under_attack\""]},{"Name":"playloopsound","Arguments":["\"zmb_capturezone_generator_alarm\"","0.25"]},{"Name":"setclientfield","Arguments":["\"zc_change_progress_bar_color\"","0"]},{"Name":"show_zone_capture_objective","Arguments":["0"]},{"Name":"players_capture_zone","Arguments":[]},{"Name":"kill_all_capture_zombies","Arguments":[]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"stoploopsound","Arguments":["0.25"]},{"Name":"generator_deactivated_vo","Arguments":[]},{"Name":"get_players","Arguments":[]},{"Name":"increment_client_stat","Arguments":["\"tomb_generator_lost\"","0"]},{"Name":"increment_player_stat","Arguments":["\"tomb_generator_lost\""]},{"Name":"set_zombie_controlled_area","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"kill_all_capture_zombies","Arguments":[]},{"Name":"get_contested_zone_count","Arguments":[]},{"Name":"flag_clear","Arguments":["\"zone_capture_in_progress\""]},{"Name":"isdefined","Arguments":["level.zone_capture.rate_capture"]},{"Name":"get_update_rate","Arguments":["10"]},{"Name":"isdefined","Arguments":["level.zone_capture.rate_capture_solo"]},{"Name":"get_update_rate","Arguments":["12"]},{"Name":"isdefined","Arguments":["level.zone_capture.rate_decay"]},{"Name":"get_update_rate","Arguments":["20"]},{"Name":"isdefined","Arguments":["level.zone_capture.rate_recapture"]},{"Name":"get_update_rate","Arguments":["40"]},{"Name":"isdefined","Arguments":["level.zone_capture.rate_recapture_players"]},{"Name":"get_update_rate","Arguments":["10"]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"ent_flag_set","Arguments":["\"zone_contested\""]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"get_recapture_attacker_count","Arguments":[]},{"Name":"ent_flag","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"ent_flag","Arguments":["\"current_recapture_target_zone\""]},{"Name":"isdefined","Arguments":["level.is_forever_solo_game"]},{"Name":"get_zone_objective_index","Arguments":[]},{"Name":"objective_position","Arguments":["self.n_objective_index","self.origin"]},{"Name":"objective_setgamemodeflags","Arguments":["self.n_objective_index","self.script_int"]},{"Name":"objective_state","Arguments":["self.n_objective_index","\"active\""]},{"Name":"clear_zone_objective_index","Arguments":[]},{"Name":"isdefined","Arguments":["self.n_objective_index"]},{"Name":"get_zones_using_objective_index","Arguments":["self.n_objective_index"]},{"Name":"objective_state","Arguments":["self.n_objective_index","\"invisible\""]},{"Name":"get_players","Arguments":[]},{"Name":"objective_clearplayerusing","Arguments":["self.n_objective_index","player"]},{"Name":"clear_zone_objective_index","Arguments":[]},{"Name":"flag_clear","Arguments":["\"generator_under_attack\""]},{"Name":"recapture_zombie_group_icon_show","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"get_recapture_attacker_count","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"generator_compromised_vo","Arguments":[]},{"Name":"endon","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"array_removedead","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"flag_waitopen","Arguments":["\"generator_under_attack\""]},{"Name":"random","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"objective_state","Arguments":["3","\"active\""]},{"Name":"objective_onentity","Arguments":["3","ai_zombie"]},{"Name":"recapture_zombie_icon_think","Arguments":[]},{"Name":"isalive","Arguments":["self"]},{"Name":"flag","Arguments":["\"generator_under_attack\""]},{"Name":"recapture_zombie_group_icon_hide","Arguments":[]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"recapture_zombie_group_icon_show","Arguments":[]},{"Name":"objective_state","Arguments":["3","\"invisible\""]},{"Name":"isalive","Arguments":["self"]},{"Name":"objective_clearentity","Arguments":["3"]},{"Name":"playsound","Arguments":["\"zmb_capturezone_success\""]},{"Name":"stoploopsound","Arguments":["0.25"]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"zone_capture_complete_vo","Arguments":[]},{"Name":"reward_players_in_capture_zone","Arguments":[]},{"Name":"set_player_controlled_area","Arguments":[]},{"Name":"wait_network_frame","Arguments":[]},{"Name":"playfx","Arguments":["level._effect","self.origin"]},{"Name":"sndplaygeneratormusicstinger","Arguments":[]},{"Name":"challenge_exists","Arguments":["\"zc_zone_captures\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"get_players_in_capture_zone","Arguments":[]},{"Name":"notify","Arguments":["\"completed_zone_capture\""]},{"Name":"player_add_points","Arguments":["\"bonus_points_powerup\"","100"]},{"Name":"increment_stat","Arguments":["\"zc_zone_captures\""]},{"Name":"increment_client_stat","Arguments":["\"tomb_generator_captured\"","0"]},{"Name":"increment_player_stat","Arguments":["\"tomb_generator_captured\""]},{"Name":"get_players","Arguments":[]},{"Name":"is_player_valid","Arguments":["player"]},{"Name":"distance2dsquared","Arguments":["player.origin","self.origin"]},{"Name":"getclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"generator_state_turn_off","Arguments":[]},{"Name":"generator_state_turn_on","Arguments":[]},{"Name":"can_start_generator_power_up_anim","Arguments":[]},{"Name":"generator_state_power_up","Arguments":[]},{"Name":"generator_state_power_down","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_event_in_progress\""]},{"Name":"generator_interrupted_vo","Arguments":[]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","1"]},{"Name":"gettime","Arguments":[]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","2"]},{"Name":"ent_flag","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","n_state"]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","4"]},{"Name":"generator_turns_off_after_anim","Arguments":[]},{"Name":"wait","Arguments":["\u003c\u003c\u003cfunction_call\u003e\u003e\u003e"]},{"Name":"getanimlength","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"generator_state_off","Arguments":[]},{"Name":"setclientfield","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","0"]},{"Name":"isdefined","Arguments":["self.n_time_started_generator"]},{"Name":"isdefined","Arguments":["self.n_time_start_anim"]},{"Name":"getanimlength","Arguments":["\u003c\u003c\u003cunary_expression\u003e\u003e\u003e"]},{"Name":"gettime","Arguments":[]},{"Name":"isalive","Arguments":["zombie"]},{"Name":"isdefined","Arguments":["zombie.is_attacking_zone"]},{"Name":"isdefined","Arguments":["self.script_noteworthy"]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_target"]},{"Name":"isdefined","Arguments":["self.script_noteworthy"]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_target"]},{"Name":"getnumzbarrierpieces","Arguments":[]},{"Name":"hidezbarrierpiece","Arguments":["i"]},{"Name":"notify","Arguments":["\"zbarrier_state_change\""]},{"Name":"showzbarrierpiece","Arguments":["0"]},{"Name":"showzbarrierpiece","Arguments":["1"]},{"Name":"magic_box_arrives","Arguments":[]},{"Name":"showzbarrierpiece","Arguments":["1"]},{"Name":"magic_box_initial","Arguments":[]},{"Name":"register_static_unitrigger","Arguments":["self.owner.unitrigger_stub","maps\\mp\\zombies\\_zm_magicbox::magicbox_unitrigger_think"]},{"Name":"showzbarrierpiece","Arguments":["2"]},{"Name":"magic_box_opens","Arguments":[]},{"Name":"showzbarrierpiece","Arguments":["2"]},{"Name":"magic_box_closes","Arguments":[]},{"Name":"showzbarrierpiece","Arguments":["1"]},{"Name":"magic_box_leaves","Arguments":[]},{"Name":"isdefined","Arguments":["level.zombie_vars"]},{"Name":"showzbarrierpiece","Arguments":["2"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","0"]},{"Name":"showzbarrierpiece","Arguments":["1"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","1"]},{"Name":"showzbarrierpiece","Arguments":["0"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","0"]},{"Name":"showzbarrierpiece","Arguments":["2"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","0"]},{"Name":"showzbarrierpiece","Arguments":["2"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","2"]},{"Name":"showzbarrierpiece","Arguments":["0"]},{"Name":"setclientfield","Arguments":["\"magicbox_amb_fx\"","3"]},{"Name":"isdefined","Arguments":["level.custom_magicbox_state_handler"]},{"Name":"self","Arguments":["state"]},{"Name":"magic_box_stub_update_prompt","Arguments":["player"]},{"Name":"isdefined","Arguments":["self.stub.hint_string"]},{"Name":"isdefined","Arguments":["self.stub.hint_parm1"]},{"Name":"sethintstring","Arguments":["self.stub.hint_string","self.stub.hint_parm1"]},{"Name":"sethintstring","Arguments":["self.stub.hint_string"]},{"Name":"setcursorhint","Arguments":["\"HINT_NOICON\""]},{"Name":"trigger_visible_to_player","Arguments":["player"]},{"Name":"isdefined","Arguments":["self.stub.trigger_target.grab_weapon_hint"]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"get_hint_string","Arguments":["self","\"default_treasure_chest\""]},{"Name":"waittill_any","Arguments":["\"between_round_over\"","\"force_recapture_start\""]},{"Name":"flag","Arguments":["\"zone_capture_in_progress\""]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"get_player_controlled_zone_count_for_recapture","Arguments":[]},{"Name":"randomintrange","Arguments":["3","6"]},{"Name":"recapture_round_start","Arguments":[]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"isdefined","Arguments":["s_last_recapture_zone"]},{"Name":"distancesquared","Arguments":["s_zone.origin","s_last_recapture_zone.origin"]},{"Name":"isdefined","Arguments":["n_distance_closest"]},{"Name":"random","Arguments":["a_s_player_zones"]},{"Name":"flag_set","Arguments":["\"recapture_event_in_progress\""]},{"Name":"flag_clear","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"flag_clear","Arguments":["\"generator_under_attack\""]},{"Name":"capture_event_handle_ai_limit","Arguments":[]},{"Name":"recapture_round_audio_starts","Arguments":[]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"get_recapture_zone","Arguments":["s_recapture_target_zone"]},{"Name":"recapture_event_start","Arguments":[]},{"Name":"monitor_recapture_zombies","Arguments":[]},{"Name":"set_recapture_zombie_attack_target","Arguments":["s_recapture_target_zone"]},{"Name":"generator_under_attack_warnings","Arguments":[]},{"Name":"ent_flag_set","Arguments":["\"current_recapture_target_zone\""]},{"Name":"hide_zone_objective_while_recapture_group_runs_to_next_generator","Arguments":["b_is_first_generator_attack"]},{"Name":"activate_capture_zone","Arguments":["b_is_first_generator_attack"]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"ent_flag_clear","Arguments":["\"current_recapture_target_zone\""]},{"Name":"ent_flag","Arguments":["\"player_controlled\""]},{"Name":"delay_thread","Arguments":["3","::broadcast_vo_category_to_team","\"recapture_started\""]},{"Name":"recapture_event_end","Arguments":[]},{"Name":"handle_generator_capture","Arguments":[]},{"Name":"capture_event_handle_ai_limit","Arguments":[]},{"Name":"kill_all_recapture_zombies","Arguments":[]},{"Name":"recapture_round_audio_ends","Arguments":[]},{"Name":"flag_clear","Arguments":["\"recapture_event_in_progress\""]},{"Name":"flag_clear","Arguments":["\"generator_under_attack\""]},{"Name":"isdefined","Arguments":["n_delay"]},{"Name":"get_players","Arguments":[]},{"Name":"get_random_speaker","Arguments":["a_players"]},{"Name":"arrayremovevalue","Arguments":["a_players","e_speaker"]},{"Name":"get_players_too_far_to_hear","Arguments":["a_players"]},{"Name":"delay_thread","Arguments":["n_delay","::create_and_play_dialog","\"zone_capture\"","str_category"]},{"Name":"distancesquared","Arguments":["player.origin","self.origin"]},{"Name":"is_player_valid","Arguments":["player"]},{"Name":"isplayeronsamemachine","Arguments":["self"]},{"Name":"isdefined","Arguments":["a_players"]},{"Name":"get_players","Arguments":[]},{"Name":"is_player_valid","Arguments":["player"]},{"Name":"random","Arguments":["a_valid_players"]},{"Name":"flag_clear","Arguments":["\"generator_under_attack\""]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"endon","Arguments":["\"sndEndRoundLoop\""]},{"Name":"spawn","Arguments":["\"script_origin\"","\u003c\u003c\u003cvector_literal\u003e\u003e\u003e"]},{"Name":"playloopsound","Arguments":["\"mus_recapture_round_loop\"","5"]},{"Name":"sndrecaptureroundloop_stop","Arguments":[]},{"Name":"flag_wait","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"stoploopsound","Arguments":["2"]},{"Name":"delete","Arguments":[]},{"Name":"array_removedead","Arguments":["level.zone_capture.recapture_zombies"]},{"Name":"flag_set","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"flag_clear","Arguments":["\"recapture_event_in_progress\""]},{"Name":"flag_clear","Arguments":["\"generator_under_attack\""]},{"Name":"isdefined","Arguments":["level.zone_capture.recapture_target"]},{"Name":"ent_flag_clear","Arguments":["\"attacked_by_recapture_zombies\""]},{"Name":"isdefined","Arguments":["self.is_recapture_zombie"]},{"Name":"isdefined","Arguments":["self.attacker"]},{"Name":"isplayer","Arguments":["self.attacker"]},{"Name":"get_recapture_zombies_needed","Arguments":[]},{"Name":"delay_thread","Arguments":["2","::create_and_play_dialog","\"zone_capture\"","\"recapture_prevented\""]},{"Name":"get_players","Arguments":[]},{"Name":"increment_client_stat","Arguments":["\"tomb_generator_defended\"","0"]},{"Name":"increment_player_stat","Arguments":["\"tomb_generator_defended\""]},{"Name":"get_recapture_zombies_needed","Arguments":[]},{"Name":"flag","Arguments":["\"generator_under_attack\""]},{"Name":"drop_max_ammo_at_death_location","Arguments":[]},{"Name":"isdefined","Arguments":["self"]},{"Name":"groundtrace","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e","0","undefined","1"]},{"Name":"vectorscale","Arguments":["\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","10.0"]},{"Name":"vectorscale","Arguments":["\u003c\u003c\u003cvector_literal\u003e\u003e\u003e","150.0"]},{"Name":"isdefined","Arguments":["v_powerup_origin"]},{"Name":"specific_powerup_drop","Arguments":["\"full_ammo\"","v_powerup_origin"]},{"Name":"flag_wait_any","Arguments":["\"generator_under_attack\"","\"recapture_zombies_cleared\""]},{"Name":"flag","Arguments":["\"recapture_zombies_cleared\""]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playloopsound","Arguments":["\"zmb_capturezone_losing\""]},{"Name":"play_flare_effect","Arguments":[]},{"Name":"flag_waitopen","Arguments":["\"generator_under_attack\""]},{"Name":"stoploopsound","Arguments":["0.2"]},{"Name":"delete","Arguments":[]},{"Name":"endon","Arguments":["\"death\""]},{"Name":"gettime","Arguments":[]},{"Name":"flag","Arguments":["\"generator_under_attack\""]},{"Name":"playfx","Arguments":["level._effect","self.origin"]},{"Name":"change_zombie_music","Arguments":["\"dog_start\""]},{"Name":"sndrecaptureroundloop","Arguments":[]},{"Name":"change_zombie_music","Arguments":["\"dog_end\""]},{"Name":"notify","Arguments":["\"sndEndRoundLoop\""]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playsoundwithnotify","Arguments":["\"vox_maxi_generator_initiate_0\"","\"vox_maxi_generator_initiate_0_done\""]},{"Name":"waittill","Arguments":["\"vox_maxi_generator_initiate_0_done\""]},{"Name":"delete","Arguments":[]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playsoundwithnotify","Arguments":["\"vox_maxi_generator_process_complete_0\"","\"vox_maxi_generator_process_complete_0_done\""]},{"Name":"waittill","Arguments":["\"vox_maxi_generator_process_complete_0_done\""]},{"Name":"playsoundwithnotify","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"waittill","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"delete","Arguments":[]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playsoundwithnotify","Arguments":["\"vox_maxi_generator_interrupted_0\"","\"vox_maxi_generator_interrupted_0_done\""]},{"Name":"waittill","Arguments":["\"vox_maxi_generator_interrupted_0_done\""]},{"Name":"delete","Arguments":[]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playsoundwithnotify","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"waittill","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"delete","Arguments":[]},{"Name":"spawn","Arguments":["\"script_origin\"","self.origin"]},{"Name":"playsoundwithnotify","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e","\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"waittill","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]},{"Name":"delete","Arguments":[]},{"Name":"get_captured_zone_count","Arguments":[]},{"Name":"sndmusicstingerevent","Arguments":["\u003c\u003c\u003cexpression\u003e\u003e\u003e"]}],"VariableAssignments":null}
+{
+  "FunctionSignatures": [
+    {
+      "Name": "init_capture_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "precache_everything",
+      "Arguments": []
+    },
+    {
+      "Name": "declare_objectives",
+      "Arguments": []
+    },
+    {
+      "Name": "init_pap_animtree",
+      "Arguments": []
+    },
+    {
+      "Name": "setup_capture_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "all_zones_captured_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "get_closest_player_to_richtofen",
+      "Arguments": []
+    },
+    {
+      "Name": "get_player_named",
+      "Arguments": [
+        "str_character_name"
+      ]
+    },
+    {
+      "Name": "quick_revive_game_type_watcher",
+      "Arguments": []
+    },
+    {
+      "Name": "quick_revive_solo_leave_watcher",
+      "Arguments": []
+    },
+    {
+      "Name": "revive_perk_fx_think",
+      "Arguments": []
+    },
+    {
+      "Name": "setup_inaccessible_zombie_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "str_zone",
+        "n_index"
+      ]
+    },
+    {
+      "Name": "setup_perk_machines_not_controlled_by_zone_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "track_max_player_zombie_points",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_dummy_init",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_init",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_think",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_enable",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_disable",
+      "Arguments": []
+    },
+    {
+      "Name": "register_elements_powered_by_zone_capture_generators",
+      "Arguments": []
+    },
+    {
+      "Name": "register_perk_machine_for_zone",
+      "Arguments": [
+        "str_zone_name",
+        "str_perk_name",
+        "str_machine_targetname",
+        "func_perk_fx_think"
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "str_zone_name",
+        "str_identifier"
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "str_zone_name",
+        "str_identifier"
+      ]
+    },
+    {
+      "Name": "get_mystery_box_from_script_noteworthy",
+      "Arguments": [
+        "str_script_noteworthy"
+      ]
+    },
+    {
+      "Name": "enable_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "enable_random_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_random_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "enable_mystery_boxes_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_mystery_boxes_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "get_perk_machine_trigger_from_vending_entity",
+      "Arguments": [
+        "str_vending_machine_targetname"
+      ]
+    },
+    {
+      "Name": "check_perk_machine_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "init_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "setup_generator_unitrigger",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_trigger_prompt_and_visibility",
+      "Arguments": [
+        "e_player"
+      ]
+    },
+    {
+      "Name": "generator_unitrigger_think",
+      "Arguments": []
+    },
+    {
+      "Name": "setup_zombie_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "add_attack_points_from_anchor_origin",
+      "Arguments": [
+        "v_origin",
+        "n_start_index",
+        "n_scale"
+      ]
+    },
+    {
+      "Name": "init_attack_point",
+      "Arguments": [
+        "v_origin",
+        "v_center_pillar"
+      ]
+    },
+    {
+      "Name": "wait_for_capture_trigger",
+      "Arguments": []
+    },
+    {
+      "Name": "refund_generator_cost_if_player_captured_it",
+      "Arguments": [
+        "e_player"
+      ]
+    },
+    {
+      "Name": "get_generator_capture_start_cost",
+      "Arguments": []
+    },
+    {
+      "Name": "capture_event_handle_ai_limit",
+      "Arguments": []
+    },
+    {
+      "Name": "get_zombie_to_delete",
+      "Arguments": []
+    },
+    {
+      "Name": "delete_zombie_for_capture_event",
+      "Arguments": []
+    },
+    {
+      "Name": "calculate_capture_event_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "get_capture_zombies_needed",
+      "Arguments": [
+        "b_per_zone"
+      ]
+    },
+    {
+      "Name": "set_capture_zombies_needed_per_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "get_recapture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "activate_capture_zone",
+      "Arguments": [
+        "b_show_emergence_holes"
+      ]
+    },
+    {
+      "Name": "show_emergence_holes",
+      "Arguments": [
+        "b_show_emergence_holes"
+      ]
+    },
+    {
+      "Name": "destroy_emergence_holes",
+      "Arguments": []
+    },
+    {
+      "Name": "delete_self_after_time",
+      "Arguments": [
+        "n_time"
+      ]
+    },
+    {
+      "Name": "monitor_capture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "monitor_recapture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "play_vo_when_generator_is_attacked",
+      "Arguments": []
+    },
+    {
+      "Name": "get_emergence_hole_spawn_point",
+      "Arguments": []
+    },
+    {
+      "Name": "get_unused_emergence_hole_spawn_point",
+      "Arguments": []
+    },
+    {
+      "Name": "emergence_hole_spawn",
+      "Arguments": []
+    },
+    {
+      "Name": "init_zone_capture_zombie_common",
+      "Arguments": [
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "init_anim_rate",
+      "Arguments": []
+    },
+    {
+      "Name": "zone_capture_gib_think",
+      "Arguments": [
+        "refs",
+        "point",
+        "weaponname"
+      ]
+    },
+    {
+      "Name": "init_capture_zombie",
+      "Arguments": [
+        "zone_struct",
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "init_recapture_zombie",
+      "Arguments": [
+        "zone_struct",
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "capture_zombie_rise_fx",
+      "Arguments": [
+        "ai_zombie"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_point",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "clean_up_unused_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "n_start",
+        "n_end"
+      ]
+    },
+    {
+      "Name": "get_claimed_attack_points_between_indicies",
+      "Arguments": [
+        "n_start",
+        "n_end"
+      ]
+    },
+    {
+      "Name": "unclaim_attacking_point",
+      "Arguments": []
+    },
+    {
+      "Name": "clear_all_zombie_attack_points_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "capture_zombies_only_attack_nearby_players",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "cancel_generator_attack_if_player_gets_close_to_generator",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "should_capture_zombie_attack_generator",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "play_melee_attack_animation",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_zombie_poi_think",
+      "Arguments": []
+    },
+    {
+      "Name": "kill_all_capture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "kill_all_recapture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "is_capture_area_occupied",
+      "Arguments": [
+        "parent_zone"
+      ]
+    },
+    {
+      "Name": "set_player_controlled_area",
+      "Arguments": []
+    },
+    {
+      "Name": "update_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_contested_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_contested_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "set_player_controlled_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "set_zombie_controlled_area",
+      "Arguments": [
+        "b_is_level_initializing"
+      ]
+    },
+    {
+      "Name": "play_pap_anim",
+      "Arguments": [
+        "b_assemble"
+      ]
+    },
+    {
+      "Name": "set_zombie_controlled_zone",
+      "Arguments": [
+        "b_is_level_initializing"
+      ]
+    },
+    {
+      "Name": "capture_progress_think",
+      "Arguments": []
+    },
+    {
+      "Name": "update_objective_on_momentum_change",
+      "Arguments": []
+    },
+    {
+      "Name": "get_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "get_zones_using_objective_index",
+      "Arguments": [
+        "n_index"
+      ]
+    },
+    {
+      "Name": "zone_capture_sound_state_think",
+      "Arguments": []
+    },
+    {
+      "Name": "handle_generator_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "init_capture_progress",
+      "Arguments": []
+    },
+    {
+      "Name": "get_progress_rate",
+      "Arguments": [
+        "n_players_in_zone",
+        "n_players_total"
+      ]
+    },
+    {
+      "Name": "show_zone_capture_objective",
+      "Arguments": [
+        "b_show_objective"
+      ]
+    },
+    {
+      "Name": "clear_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "hide_zone_objective_while_recapture_group_runs_to_next_generator",
+      "Arguments": [
+        "b_hide_icon"
+      ]
+    },
+    {
+      "Name": "recapture_zombie_group_icon_show",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_zombie_icon_think",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_zombie_group_icon_hide",
+      "Arguments": []
+    },
+    {
+      "Name": "players_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "reward_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "show_zone_capture_debug_info",
+      "Arguments": []
+    },
+    {
+      "Name": "get_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "n_duration"
+      ]
+    },
+    {
+      "Name": "generator_set_state",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_turn_on",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_power_up",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_power_down",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_turn_off",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_turns_off_after_anim",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_off",
+      "Arguments": []
+    },
+    {
+      "Name": "can_start_generator_power_up_anim",
+      "Arguments": []
+    },
+    {
+      "Name": "get_recapture_attacker_count",
+      "Arguments": []
+    },
+    {
+      "Name": "watch_for_open_sesame",
+      "Arguments": []
+    },
+    {
+      "Name": "debug_watch_for_zone_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "debug_watch_for_zone_recapture",
+      "Arguments": []
+    },
+    {
+      "Name": "debug_set_generator_active",
+      "Arguments": []
+    },
+    {
+      "Name": "debug_set_generator_inactive",
+      "Arguments": []
+    },
+    {
+      "Name": "set_magic_box_zbarrier_state",
+      "Arguments": [
+        "state"
+      ]
+    },
+    {
+      "Name": "magic_box_trigger_update_prompt",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "magic_box_stub_update_prompt",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "recapture_round_tracker",
+      "Arguments": []
+    },
+    {
+      "Name": "get_player_controlled_zone_count_for_recapture",
+      "Arguments": []
+    },
+    {
+      "Name": "get_recapture_zone",
+      "Arguments": [
+        "s_last_recapture_zone"
+      ]
+    },
+    {
+      "Name": "recapture_round_start",
+      "Arguments": []
+    },
+    {
+      "Name": "broadcast_vo_category_to_team",
+      "Arguments": [
+        "str_category",
+        "n_delay"
+      ]
+    },
+    {
+      "Name": "get_players_too_far_to_hear",
+      "Arguments": [
+        "a_players"
+      ]
+    },
+    {
+      "Name": "get_random_speaker",
+      "Arguments": [
+        "a_players"
+      ]
+    },
+    {
+      "Name": "set_recapture_zombie_attack_target",
+      "Arguments": [
+        "s_recapture_target_zone"
+      ]
+    },
+    {
+      "Name": "sndrecaptureroundloop",
+      "Arguments": []
+    },
+    {
+      "Name": "sndrecaptureroundloop_stop",
+      "Arguments": []
+    },
+    {
+      "Name": "monitor_recapture_zombie_count",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_zombie_death_func",
+      "Arguments": []
+    },
+    {
+      "Name": "drop_max_ammo_at_death_location",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_under_attack_warnings",
+      "Arguments": []
+    },
+    {
+      "Name": "play_flare_effect",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_round_audio_starts",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_round_audio_ends",
+      "Arguments": []
+    },
+    {
+      "Name": "custom_vending_power_on",
+      "Arguments": []
+    },
+    {
+      "Name": "custom_vending_power_off",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_initiated_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "zone_capture_complete_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_interrupted_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_compromised_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_deactivated_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "sndplaygeneratormusicstinger",
+      "Arguments": []
+    }
+  ],
+  "FunctionCalls": [
+    {
+      "Name": "#using_animtree",
+      "Arguments": [
+        "\"fxanim_props_dlc4\""
+      ]
+    },
+    {
+      "Name": "capture_zone_init_start",
+      "Arguments": []
+    },
+    {
+      "Name": "precache_everything",
+      "Arguments": []
+    },
+    {
+      "Name": "declare_objectives",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"capture_zones_init_done\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "flag_init",
+      "Arguments": [
+        "\"generator_lost_to_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "setup_capture_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "precachemodel",
+      "Arguments": [
+        "\"p6_zm_tm_zone_capture_hole\""
+      ]
+    },
+    {
+      "Name": "precachemodel",
+      "Arguments": [
+        "\"p6_zm_tm_packapunch\""
+      ]
+    },
+    {
+      "Name": "precacherumble",
+      "Arguments": [
+        "\"generator_active\""
+      ]
+    },
+    {
+      "Name": "precachestring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "precachestring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "precachestring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "precachestring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "precachestring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "objective_add",
+      "Arguments": [
+        "0",
+        "\"invisible\"",
+        "<<<vector_literal>>>",
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "objective_add",
+      "Arguments": [
+        "1",
+        "\"invisible\"",
+        "<<<vector_literal>>>",
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "objective_add",
+      "Arguments": [
+        "2",
+        "\"invisible\"",
+        "<<<vector_literal>>>",
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "objective_add",
+      "Arguments": [
+        "3",
+        "\"invisible\"",
+        "<<<vector_literal>>>",
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "scriptmodelsuseanimtree",
+      "Arguments": [
+        "#animtree"
+      ]
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"capture_zombie_spawner\"",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "add_spawn_function",
+      "Arguments": [
+        "::capture_zombie_spawn_init"
+      ]
+    },
+    {
+      "Name": "getstructarray",
+      "Arguments": [
+        "\"s_generator\"",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "\"packapunch_anim\"",
+        "14000",
+        "3",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"actor\"",
+        "\"zone_capture_zombie\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"scriptmover\"",
+        "\"zone_capture_emergence_hole\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "\"zc_change_progress_bar_color\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "\"zone_capture_hud_all_generators_captured\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "\"zone_capture_perk_machine_smoke_fx_always_on\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "\"pap_monolith_ring_shake\"",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "struct.script_noteworthy",
+        "14000",
+        "7",
+        "\"float\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "<<<expression>>>",
+        "14000",
+        "3",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "<<<expression>>>",
+        "14000",
+        "2",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "<<<expression>>>",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "registerclientfield",
+      "Arguments": [
+        "\"world\"",
+        "<<<expression>>>",
+        "14000",
+        "1",
+        "\"int\""
+      ]
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"start_zombie_round_logic\""
+      ]
+    },
+    {
+      "Name": "track_max_player_zombie_points",
+      "Arguments": []
+    },
+    {
+      "Name": "init_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "register_elements_powered_by_zone_capture_generators",
+      "Arguments": []
+    },
+    {
+      "Name": "setup_perk_machines_not_controlled_by_zone_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "pack_a_punch_init",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_round_tracker",
+      "Arguments": []
+    },
+    {
+      "Name": "register_zombie_death_event_callback",
+      "Arguments": [
+        "::recapture_zombie_death_func"
+      ]
+    },
+    {
+      "Name": "setup_inaccessible_zombie_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "quick_revive_game_type_watcher",
+      "Arguments": []
+    },
+    {
+      "Name": "quick_revive_solo_leave_watcher",
+      "Arguments": []
+    },
+    {
+      "Name": "all_zones_captured_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"capture_zones_init_done\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_perk_machine_smoke_fx_always_on\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "capture_zone_init_end",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"story_vo_playing\""
+      ]
+    },
+    {
+      "Name": "set_players_dontspeak",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"story_vo_playing\""
+      ]
+    },
+    {
+      "Name": "get_closest_player_to_richtofen",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "e_speaker"
+      ]
+    },
+    {
+      "Name": "set_player_dontspeak",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "create_and_play_dialog",
+      "Arguments": [
+        "\"zone_capture\"",
+        "\"all_generators_captured\""
+      ]
+    },
+    {
+      "Name": "waittill_any",
+      "Arguments": [
+        "\"done_speaking\"",
+        "\"disconnect\""
+      ]
+    },
+    {
+      "Name": "get_player_named",
+      "Arguments": [
+        "\"Richtofen\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "e_richtofen"
+      ]
+    },
+    {
+      "Name": "set_player_dontspeak",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "create_and_play_dialog",
+      "Arguments": [
+        "\"zone_capture\"",
+        "\"all_generators_captured\""
+      ]
+    },
+    {
+      "Name": "set_players_dontspeak",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"story_vo_playing\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "get_player_named",
+      "Arguments": [
+        "\"Richtofen\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "e_richtofen"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "a_players",
+        "e_richtofen",
+        "0"
+      ]
+    },
+    {
+      "Name": "arraysort",
+      "Arguments": [
+        "a_players",
+        "e_richtofen.origin",
+        "1"
+      ]
+    },
+    {
+      "Name": "get_random_speaker",
+      "Arguments": []
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "player.character_name"
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"revive_hide\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"revive_on\""
+      ]
+    },
+    {
+      "Name": "reset_vending_hint_string",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"revive_off\""
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "flag_exists",
+      "Arguments": [
+        "\"solo_revive\""
+      ]
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"solo_revive\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_perk_machine_smoke_fx_1\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "flag_exists",
+      "Arguments": [
+        "\"solo_revive\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"solo_revive\""
+      ]
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "\"generator_start_bunker\"",
+        "5"
+      ]
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "\"generator_start_bunker\"",
+        "11"
+      ]
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "\"generator_tank_trench\"",
+        "4"
+      ]
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "\"generator_tank_trench\"",
+        "5"
+      ]
+    },
+    {
+      "Name": "set_attack_point_as_inaccessible",
+      "Arguments": [
+        "\"generator_tank_trench\"",
+        "6"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "ent_flag_wait",
+      "Arguments": [
+        "\"zone_initialized\""
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones",
+        ".zombie_attack_points"
+      ]
+    },
+    {
+      "Name": "array",
+      "Arguments": [
+        "\"specialty_additionalprimaryweapon\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"between_round_over\""
+      ]
+    },
+    {
+      "Name": "getentarray",
+      "Arguments": [
+        "\"specialty_weapupgrade\"",
+        "\"script_noteworthy\""
+      ]
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"specialty_weapupgrade\"",
+        "\"script_noteworthy\""
+      ]
+    },
+    {
+      "Name": "ghost",
+      "Arguments": []
+    },
+    {
+      "Name": "notsolid",
+      "Arguments": []
+    },
+    {
+      "Name": "enablelinkto",
+      "Arguments": []
+    },
+    {
+      "Name": "linkto",
+      "Arguments": [
+        "t_pap"
+      ]
+    },
+    {
+      "Name": "pack_a_punch_think",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "pack_a_punch_enable",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "pack_a_punch_disable",
+      "Arguments": []
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"specialty_weapupgrade\"",
+        "\"script_noteworthy\""
+      ]
+    },
+    {
+      "Name": "trigger_on",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"power_on\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_hud_all_generators_captured\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"generator_lost_to_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"all_zones_captured_none_lost\""
+      ]
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"specialty_weapupgrade\"",
+        "\"script_noteworthy\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_hud_all_generators_captured\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"pack_machine_in_use\""
+      ]
+    },
+    {
+      "Name": "trigger_off",
+      "Arguments": []
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_start_bunker\"",
+        "\"starting_bunker\""
+      ]
+    },
+    {
+      "Name": "register_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_start_bunker\"",
+        "\"revive\"",
+        "\"vending_revive\"",
+        "::revive_perk_fx_think"
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_start_bunker\"",
+        "\"bunker_start_chest\""
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_tank_trench\"",
+        "\"trenches_right\""
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_tank_trench\"",
+        "\"bunker_tank_chest\""
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_mid_trench\"",
+        "\"trenches_left\""
+      ]
+    },
+    {
+      "Name": "register_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_mid_trench\"",
+        "\"sleight\"",
+        "\"vending_sleight\""
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_mid_trench\"",
+        "\"bunker_cp_chest\""
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_nml_right\"",
+        "\"nml\""
+      ]
+    },
+    {
+      "Name": "register_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_nml_right\"",
+        "\"juggernog\"",
+        "\"vending_jugg\""
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_nml_right\"",
+        "\"nml_open_chest\""
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_nml_left\"",
+        "\"farmhouse\""
+      ]
+    },
+    {
+      "Name": "register_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_nml_left\"",
+        "\"marathon\"",
+        "\"vending_marathon\""
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_nml_left\"",
+        "\"nml_farm_chest\""
+      ]
+    },
+    {
+      "Name": "register_random_perk_machine_for_zone",
+      "Arguments": [
+        "\"generator_church\"",
+        "\"church\""
+      ]
+    },
+    {
+      "Name": "register_mystery_box_for_zone",
+      "Arguments": [
+        "\"generator_church\"",
+        "\"village_church_chest\""
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones",
+        ".perk_machines"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones",
+        ".perk_machines"
+      ]
+    },
+    {
+      "Name": "get_perk_machine_trigger_from_vending_entity",
+      "Arguments": [
+        "str_machine_targetname"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones",
+        ".perk_machines_random"
+      ]
+    },
+    {
+      "Name": "getentarray",
+      "Arguments": [
+        "\"random_perk_machine\"",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "random_perk_machine.script_string"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones",
+        ".mystery_boxes"
+      ]
+    },
+    {
+      "Name": "get_mystery_box_from_script_noteworthy",
+      "Arguments": [
+        "str_identifier"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "s_mystery_box.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "s_mystery_box"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "isarray",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "getarraykeys",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "reset_vending_hint_string",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "isarray",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "getarraykeys",
+      "Arguments": [
+        "self.perk_machines"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.perk_machines_random"
+      ]
+    },
+    {
+      "Name": "isarray",
+      "Arguments": [
+        "self.perk_machines_random"
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "<<<unary_expression>>>",
+        "level._random_zombie_perk_cost"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.perk_machines_random"
+      ]
+    },
+    {
+      "Name": "isarray",
+      "Arguments": [
+        "self.perk_machines_random"
+      ]
+    },
+    {
+      "Name": "set_magic_box_zbarrier_state",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_runes\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "set_magic_box_zbarrier_state",
+      "Arguments": [
+        "\"zombie_controlled\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_runes\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "str_vending_machine_targetname",
+        "\"target\""
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "e_trigger"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "isinarray",
+      "Arguments": [
+        "level.zone_capture.perk_machines_always_on",
+        "self.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "\"str_zone_name field missing on perk machine! This is required by the zone capture system!\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.str_zone_name"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "create_and_play_dialog",
+      "Arguments": [
+        "\"lockdown\"",
+        "\"power_off\""
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "\"capture zone struct is missing script_noteworthy KVP! This is required for init_capture_zone()\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture"
+      ]
+    },
+    {
+      "Name": "spawnstruct",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<unary_expression>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.zones"
+      ]
+    },
+    {
+      "Name": "setup_generator_unitrigger",
+      "Arguments": []
+    },
+    {
+      "Name": "get_zone_from_position",
+      "Arguments": [
+        "self.origin",
+        "1"
+      ]
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<function_call>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.script_int"
+      ]
+    },
+    {
+      "Name": "ent_flag_init",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "ent_flag_init",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "ent_flag_init",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "ent_flag_init",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "ent_flag_init",
+      "Arguments": [
+        "\"zone_initialized\""
+      ]
+    },
+    {
+      "Name": "set_zombie_controlled_area",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "setup_zombie_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"zone_initialized\""
+      ]
+    },
+    {
+      "Name": "wait_for_capture_trigger",
+      "Arguments": []
+    },
+    {
+      "Name": "spawnstruct",
+      "Arguments": []
+    },
+    {
+      "Name": "unitrigger_force_per_player_triggers",
+      "Arguments": [
+        "s_unitrigger_stub",
+        "1"
+      ]
+    },
+    {
+      "Name": "register_static_unitrigger",
+      "Arguments": [
+        "s_unitrigger_stub",
+        "::generator_unitrigger_think"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "<<<unary_expression>>>",
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "get_generator_capture_start_cost",
+      "Arguments": []
+    },
+    {
+      "Name": "setinvisibletoplayer",
+      "Arguments": [
+        "e_player",
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"kill_trigger\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"trigger\"",
+        "e_player"
+      ]
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "e_player"
+      ]
+    },
+    {
+      "Name": "is_reviving_any",
+      "Arguments": []
+    },
+    {
+      "Name": "get_generator_capture_start_cost",
+      "Arguments": []
+    },
+    {
+      "Name": "create_and_play_dialog",
+      "Arguments": [
+        "\"general\"",
+        "\"no_money_capture\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "setinvisibletoall",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"start_generator_capture\"",
+        "e_player"
+      ]
+    },
+    {
+      "Name": "anglestoright",
+      "Arguments": [
+        "self.angles"
+      ]
+    },
+    {
+      "Name": "add_attack_points_from_anchor_origin",
+      "Arguments": [
+        "self.origin",
+        "0",
+        "52"
+      ]
+    },
+    {
+      "Name": "add_attack_points_from_anchor_origin",
+      "Arguments": [
+        "<<<expression>>>",
+        "4",
+        "32"
+      ]
+    },
+    {
+      "Name": "add_attack_points_from_anchor_origin",
+      "Arguments": [
+        "<<<expression>>>",
+        "8",
+        "32"
+      ]
+    },
+    {
+      "Name": "anglestoforward",
+      "Arguments": [
+        "self.angles"
+      ]
+    },
+    {
+      "Name": "anglestoright",
+      "Arguments": [
+        "self.angles"
+      ]
+    },
+    {
+      "Name": "init_attack_point",
+      "Arguments": [
+        "<<<expression>>>",
+        "v_origin"
+      ]
+    },
+    {
+      "Name": "init_attack_point",
+      "Arguments": [
+        "<<<expression>>>",
+        "v_origin"
+      ]
+    },
+    {
+      "Name": "init_attack_point",
+      "Arguments": [
+        "<<<expression>>>",
+        "v_origin"
+      ]
+    },
+    {
+      "Name": "init_attack_point",
+      "Arguments": [
+        "<<<expression>>>",
+        "v_origin"
+      ]
+    },
+    {
+      "Name": "spawnstruct",
+      "Arguments": []
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"start_generator_capture\"",
+        "e_player"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "get_generator_capture_start_cost",
+      "Arguments": []
+    },
+    {
+      "Name": "minus_to_player_score",
+      "Arguments": [
+        "self.generator_cost"
+      ]
+    },
+    {
+      "Name": "delay_thread",
+      "Arguments": [
+        "2.5",
+        "::create_and_play_dialog",
+        "\"zone_capture\"",
+        "\"capture_started\""
+      ]
+    },
+    {
+      "Name": "capture_event_start",
+      "Arguments": []
+    },
+    {
+      "Name": "monitor_capture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "activate_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_wait",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "capture_event_handle_ai_limit",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_waitopen",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "capture_event_end",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "e_player"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "refund_generator_cost_if_player_captured_it",
+      "Arguments": [
+        "e_player"
+      ]
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "capture_event_handle_ai_limit",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "ent_flag_waitopen",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "isinarray",
+      "Arguments": [
+        "<<<function_call>>>",
+        "e_player"
+      ]
+    },
+    {
+      "Name": "get_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "add_to_player_score",
+      "Arguments": [
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "int",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "calculate_capture_event_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "get_current_zombie_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_zombie_to_delete",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "ai_zombie"
+      ]
+    },
+    {
+      "Name": "delete_zombie_for_capture_event",
+      "Arguments": []
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "get_round_enemy_array",
+      "Arguments": []
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "a_zombies"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "ghost",
+      "Arguments": []
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "get_capture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "get_recapture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "b_per_zone"
+      ]
+    },
+    {
+      "Name": "get_contested_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "get_contested_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "get_capture_zombies_needed",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "b_show_emergence_holes"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "generator_initiated_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "getstructarray",
+      "Arguments": [
+        "self.target",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "show_emergence_holes",
+      "Arguments": [
+        "b_show_emergence_holes"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "flag_wait_any",
+      "Arguments": [
+        "\"generator_under_attack\"",
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "capture_progress_think",
+      "Arguments": []
+    },
+    {
+      "Name": "destroy_emergence_holes",
+      "Arguments": []
+    },
+    {
+      "Name": "destroy_emergence_holes",
+      "Arguments": []
+    },
+    {
+      "Name": "emergence_hole_spawn",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.a_emergence_holes"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "m_emergence_hole"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_emergence_hole\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "ghost",
+      "Arguments": []
+    },
+    {
+      "Name": "delete_self_after_time",
+      "Arguments": [
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "randomfloatrange",
+      "Arguments": [
+        "0.5",
+        "2.0"
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "wait",
+      "Arguments": [
+        "n_time"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_wait",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"capture_zombie_spawner\"",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "set_capture_zombies_needed_per_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "self.capture_zombies"
+      ]
+    },
+    {
+      "Name": "spawn_zombie",
+      "Arguments": [
+        "e_spawner_capture_zombie"
+      ]
+    },
+    {
+      "Name": "get_emergence_hole_spawn_point",
+      "Arguments": []
+    },
+    {
+      "Name": "getent",
+      "Arguments": [
+        "\"capture_zombie_spawner\"",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "get_recapture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "play_vo_when_generator_is_attacked",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "spawn_zombie",
+      "Arguments": [
+        "e_spawner_capture_zombie"
+      ]
+    },
+    {
+      "Name": "get_emergence_hole_spawn_point",
+      "Arguments": []
+    },
+    {
+      "Name": "monitor_recapture_zombie_count",
+      "Arguments": []
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"zombies_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "broadcast_vo_category_to_team",
+      "Arguments": [
+        "\"recapture_generator_attacked\"",
+        "3.5"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.a_emergence_hole_structs"
+      ]
+    },
+    {
+      "Name": "get_unused_emergence_hole_spawn_point",
+      "Arguments": []
+    },
+    {
+      "Name": "getstructarray",
+      "Arguments": [
+        "self.target",
+        "\"targetname\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "s_emergence_hole.spawned_zombie"
+      ]
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "a_valid_spawn_points"
+      ]
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_model\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "setmodel",
+      "Arguments": [
+        "\"p6_zm_tm_zone_capture_hole\""
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_emergence_hole\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "setphysparams",
+      "Arguments": [
+        "15",
+        "0",
+        "72"
+      ]
+    },
+    {
+      "Name": "dug_zombie_rise",
+      "Arguments": [
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "playsound",
+      "Arguments": [
+        "\"zmb_vocals_capzomb_spawn\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zone_capture_zombie\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "init_anim_rate",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"anim_rate\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "getclientfield",
+      "Arguments": [
+        "\"anim_rate\""
+      ]
+    },
+    {
+      "Name": "setentityanimrate",
+      "Arguments": [
+        "n_rate"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.is_recapture_zombie"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "refs",
+        "\"right_leg\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "refs",
+        "\"left_leg\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "refs",
+        "\"no_legs\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "init_zone_capture_zombie_common",
+      "Arguments": [
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.zombie_move_speed"
+      ]
+    },
+    {
+      "Name": "set_zombie_run_cycle",
+      "Arguments": [
+        "\"run\""
+      ]
+    },
+    {
+      "Name": "find_flesh",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"zombie_custom_think_done\"",
+        "find_flesh_struct_string"
+      ]
+    },
+    {
+      "Name": "capture_zombies_only_attack_nearby_players",
+      "Arguments": [
+        "zone_struct"
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "init_zone_capture_zombie_common",
+      "Arguments": [
+        "s_spawn_point"
+      ]
+    },
+    {
+      "Name": "recapture_zombie_poi_think",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacking_point"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacking_point"
+      ]
+    },
+    {
+      "Name": "unclaim_attacking_point",
+      "Arguments": []
+    },
+    {
+      "Name": "get_unclaimed_attack_point",
+      "Arguments": [
+        "self.s_attack_generator"
+      ]
+    },
+    {
+      "Name": "setgoalpos",
+      "Arguments": [
+        "v_attack_origin"
+      ]
+    },
+    {
+      "Name": "waittill_either",
+      "Arguments": [
+        "\"goal\"",
+        "\"poi_state_changed\""
+      ]
+    },
+    {
+      "Name": "distance",
+      "Arguments": [
+        "self.attacking_point.origin",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_target"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.s_attack_generator.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_target"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.s_attack_generator.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"zombies_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacking_point"
+      ]
+    },
+    {
+      "Name": "unclaim_attacking_point",
+      "Arguments": []
+    },
+    {
+      "Name": "play_melee_attack_animation",
+      "Arguments": []
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "self.origin",
+        "<<<function_call>>>",
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "anglestoforward",
+      "Arguments": [
+        "self.angles"
+      ]
+    },
+    {
+      "Name": "anglestoup",
+      "Arguments": [
+        "self.angles"
+      ]
+    },
+    {
+      "Name": "clean_up_unused_attack_points",
+      "Arguments": []
+    },
+    {
+      "Name": "get_claimed_attack_points_between_indicies",
+      "Arguments": [
+        "0",
+        "3"
+      ]
+    },
+    {
+      "Name": "get_claimed_attack_points_between_indicies",
+      "Arguments": [
+        "4",
+        "7"
+      ]
+    },
+    {
+      "Name": "get_claimed_attack_points_between_indicies",
+      "Arguments": [
+        "8",
+        "11"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "0",
+        "3"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "4",
+        "7"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "8",
+        "11"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "0",
+        "11"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_points_between_indicies",
+      "Arguments": [
+        "0",
+        "11"
+      ]
+    },
+    {
+      "Name": "assert",
+      "Arguments": [
+        "<<<expression>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "a_valid_attack_points"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "s_attack_point.claimed_by"
+      ]
+    },
+    {
+      "Name": "unclaim_attacking_point",
+      "Arguments": []
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "should_capture_zombie_attack_generator",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"stop_find_flesh\""
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"zombie_acquire_enemy\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacking_point"
+      ]
+    },
+    {
+      "Name": "get_unclaimed_attack_point",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "setgoalpos",
+      "Arguments": [
+        "self.attacking_point.origin"
+      ]
+    },
+    {
+      "Name": "cancel_generator_attack_if_player_gets_close_to_generator",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "waittill_any_return",
+      "Arguments": [
+        "\"goal\"",
+        "\"stop_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "str_notify"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "\"stop_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "str_notify"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "\"stop_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "unclaim_attacking_point",
+      "Arguments": []
+    },
+    {
+      "Name": "play_melee_attack_animation",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"generator_attack_cancel_think\""
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"generator_attack_cancel_think\""
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "should_capture_zombie_attack_generator",
+      "Arguments": [
+        "s_zone"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"stop_attacking_generator\""
+      ]
+    },
+    {
+      "Name": "find_flesh",
+      "Arguments": []
+    },
+    {
+      "Name": "wait",
+      "Arguments": [
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "randomfloatrange",
+      "Arguments": [
+        "0.2",
+        "1.5"
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "arraysort",
+      "Arguments": [
+        "a_players",
+        "s_zone.origin",
+        "1",
+        "undefined",
+        "700"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.ignore_player"
+      ]
+    },
+    {
+      "Name": "isinarray",
+      "Arguments": [
+        "a_valid_targets",
+        "player"
+      ]
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "isinarray",
+      "Arguments": [
+        "self.ignore_player",
+        "player"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "self.ignore_player",
+        "player",
+        "0"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.enemy"
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"poi_state_changed\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacking_point"
+      ]
+    },
+    {
+      "Name": "vectortoangles",
+      "Arguments": [
+        "<<<vector_literal>>>"
+      ]
+    },
+    {
+      "Name": "animscripted",
+      "Arguments": [
+        "self.origin",
+        "v_angles",
+        "\"zm_generator_melee\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"static_melee_anim\"",
+        "note"
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level._poi_override"
+      ]
+    },
+    {
+      "Name": "self",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie_poi"
+      ]
+    },
+    {
+      "Name": "get_zombie_point_of_interest",
+      "Arguments": [
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie_poi"
+      ]
+    },
+    {
+      "Name": "isarray",
+      "Arguments": [
+        "zombie_poi"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie_poi"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"poi_state_changed\""
+      ]
+    },
+    {
+      "Name": "stopanimscripted",
+      "Arguments": [
+        "0.2"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.capture_zombies"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie"
+      ]
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "zombie"
+      ]
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "zombie.origin"
+      ]
+    },
+    {
+      "Name": "dodamage",
+      "Arguments": [
+        "<<<expression>>>",
+        "zombie.origin"
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "self.capture_zombies"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie"
+      ]
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "zombie"
+      ]
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "zombie.origin"
+      ]
+    },
+    {
+      "Name": "dodamage",
+      "Arguments": [
+        "<<<expression>>>",
+        "zombie.origin"
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "set_player_controlled_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "play_pap_anim",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"all_zones_captured\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "get_contested_zones",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "1"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "0"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.perk_fx_func"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "1"
+      ]
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "update_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "enable_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "enable_random_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "enable_mystery_boxes_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"zone_captured_by_player\"",
+        "self.str_zone"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "b_is_level_initializing"
+      ]
+    },
+    {
+      "Name": "update_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "3"
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "0"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"generator_lost_to_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "set_zombie_controlled_zone",
+      "Arguments": [
+        "b_is_level_initializing"
+      ]
+    },
+    {
+      "Name": "play_pap_anim",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"packapunch_anim\"",
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "b_is_level_initializing"
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "n_hud_state"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "1"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "0"
+      ]
+    },
+    {
+      "Name": "update_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_random_perk_machines_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "disable_mystery_boxes_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "init_capture_progress",
+      "Arguments": []
+    },
+    {
+      "Name": "clear_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "show_zone_capture_objective",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "get_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "get_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "isinarray",
+      "Arguments": [
+        "a_players_in_capture_zone",
+        "player"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "objective_setplayerusing",
+      "Arguments": [
+        "self.n_objective_index",
+        "player"
+      ]
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "objective_clearplayerusing",
+      "Arguments": [
+        "self.n_objective_index",
+        "player"
+      ]
+    },
+    {
+      "Name": "get_progress_rate",
+      "Arguments": [
+        "a_players_in_capture_zone.size",
+        "a_players.size"
+      ]
+    },
+    {
+      "Name": "clamp",
+      "Arguments": [
+        "self.n_current_progress",
+        "0",
+        "100"
+      ]
+    },
+    {
+      "Name": "objective_setprogress",
+      "Arguments": [
+        "self.n_objective_index",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "zone_capture_sound_state_think",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "self.script_noteworthy",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "generator_set_state",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zc_change_progress_bar_color\"",
+        "b_set_color_to_white"
+      ]
+    },
+    {
+      "Name": "update_objective_on_momentum_change",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "show_zone_capture_debug_info",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "handle_generator_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "clear_all_zombie_attack_points_in_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "clear_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "show_zone_capture_objective",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zc_change_progress_bar_color\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.n_objective_index"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zone.n_objective_index"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.is_playing_audio"
+      ]
+    },
+    {
+      "Name": "stoploopsound",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "playloopsound",
+      "Arguments": [
+        "\"zmb_capturezone_generator_alarm\"",
+        "0.25"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"zc_change_progress_bar_color\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "show_zone_capture_objective",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "players_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "kill_all_capture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "stoploopsound",
+      "Arguments": [
+        "0.25"
+      ]
+    },
+    {
+      "Name": "generator_deactivated_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "increment_client_stat",
+      "Arguments": [
+        "\"tomb_generator_lost\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "increment_player_stat",
+      "Arguments": [
+        "\"tomb_generator_lost\""
+      ]
+    },
+    {
+      "Name": "set_zombie_controlled_area",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "kill_all_capture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "get_contested_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.rate_capture"
+      ]
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "10"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.rate_capture_solo"
+      ]
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "12"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.rate_decay"
+      ]
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "20"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.rate_recapture"
+      ]
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "40"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.rate_recapture_players"
+      ]
+    },
+    {
+      "Name": "get_update_rate",
+      "Arguments": [
+        "10"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"zone_contested\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "get_recapture_attacker_count",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.is_forever_solo_game"
+      ]
+    },
+    {
+      "Name": "get_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "objective_position",
+      "Arguments": [
+        "self.n_objective_index",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "objective_setgamemodeflags",
+      "Arguments": [
+        "self.n_objective_index",
+        "self.script_int"
+      ]
+    },
+    {
+      "Name": "objective_state",
+      "Arguments": [
+        "self.n_objective_index",
+        "\"active\""
+      ]
+    },
+    {
+      "Name": "clear_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.n_objective_index"
+      ]
+    },
+    {
+      "Name": "get_zones_using_objective_index",
+      "Arguments": [
+        "self.n_objective_index"
+      ]
+    },
+    {
+      "Name": "objective_state",
+      "Arguments": [
+        "self.n_objective_index",
+        "\"invisible\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "objective_clearplayerusing",
+      "Arguments": [
+        "self.n_objective_index",
+        "player"
+      ]
+    },
+    {
+      "Name": "clear_zone_objective_index",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "recapture_zombie_group_icon_show",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "get_recapture_attacker_count",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "generator_compromised_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "objective_state",
+      "Arguments": [
+        "3",
+        "\"active\""
+      ]
+    },
+    {
+      "Name": "objective_onentity",
+      "Arguments": [
+        "3",
+        "ai_zombie"
+      ]
+    },
+    {
+      "Name": "recapture_zombie_icon_think",
+      "Arguments": []
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "recapture_zombie_group_icon_hide",
+      "Arguments": []
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "recapture_zombie_group_icon_show",
+      "Arguments": []
+    },
+    {
+      "Name": "objective_state",
+      "Arguments": [
+        "3",
+        "\"invisible\""
+      ]
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "objective_clearentity",
+      "Arguments": [
+        "3"
+      ]
+    },
+    {
+      "Name": "playsound",
+      "Arguments": [
+        "\"zmb_capturezone_success\""
+      ]
+    },
+    {
+      "Name": "stoploopsound",
+      "Arguments": [
+        "0.25"
+      ]
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "zone_capture_complete_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "reward_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "set_player_controlled_area",
+      "Arguments": []
+    },
+    {
+      "Name": "wait_network_frame",
+      "Arguments": []
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "sndplaygeneratormusicstinger",
+      "Arguments": []
+    },
+    {
+      "Name": "challenge_exists",
+      "Arguments": [
+        "\"zc_zone_captures\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "get_players_in_capture_zone",
+      "Arguments": []
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"completed_zone_capture\""
+      ]
+    },
+    {
+      "Name": "player_add_points",
+      "Arguments": [
+        "\"bonus_points_powerup\"",
+        "100"
+      ]
+    },
+    {
+      "Name": "increment_stat",
+      "Arguments": [
+        "\"zc_zone_captures\""
+      ]
+    },
+    {
+      "Name": "increment_client_stat",
+      "Arguments": [
+        "\"tomb_generator_captured\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "increment_player_stat",
+      "Arguments": [
+        "\"tomb_generator_captured\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "distance2dsquared",
+      "Arguments": [
+        "player.origin",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "getclientfield",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "generator_state_turn_off",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_turn_on",
+      "Arguments": []
+    },
+    {
+      "Name": "can_start_generator_power_up_anim",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_power_up",
+      "Arguments": []
+    },
+    {
+      "Name": "generator_state_power_down",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "generator_interrupted_vo",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "1"
+      ]
+    },
+    {
+      "Name": "gettime",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "2"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "n_state"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "4"
+      ]
+    },
+    {
+      "Name": "generator_turns_off_after_anim",
+      "Arguments": []
+    },
+    {
+      "Name": "wait",
+      "Arguments": [
+        "<<<function_call>>>"
+      ]
+    },
+    {
+      "Name": "getanimlength",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "generator_state_off",
+      "Arguments": []
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "<<<expression>>>",
+        "0"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.n_time_started_generator"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.n_time_start_anim"
+      ]
+    },
+    {
+      "Name": "getanimlength",
+      "Arguments": [
+        "<<<unary_expression>>>"
+      ]
+    },
+    {
+      "Name": "gettime",
+      "Arguments": []
+    },
+    {
+      "Name": "isalive",
+      "Arguments": [
+        "zombie"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "zombie.is_attacking_zone"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_target"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.script_noteworthy"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_target"
+      ]
+    },
+    {
+      "Name": "getnumzbarrierpieces",
+      "Arguments": []
+    },
+    {
+      "Name": "hidezbarrierpiece",
+      "Arguments": [
+        "i"
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"zbarrier_state_change\""
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "magic_box_arrives",
+      "Arguments": []
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "magic_box_initial",
+      "Arguments": []
+    },
+    {
+      "Name": "register_static_unitrigger",
+      "Arguments": [
+        "self.owner.unitrigger_stub",
+        "maps\\mp\\zombies\\_zm_magicbox::magicbox_unitrigger_think"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "magic_box_opens",
+      "Arguments": []
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "magic_box_closes",
+      "Arguments": []
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "magic_box_leaves",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zombie_vars"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "1"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "1"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "2"
+      ]
+    },
+    {
+      "Name": "showzbarrierpiece",
+      "Arguments": [
+        "0"
+      ]
+    },
+    {
+      "Name": "setclientfield",
+      "Arguments": [
+        "\"magicbox_amb_fx\"",
+        "3"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.custom_magicbox_state_handler"
+      ]
+    },
+    {
+      "Name": "self",
+      "Arguments": [
+        "state"
+      ]
+    },
+    {
+      "Name": "magic_box_stub_update_prompt",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.stub.hint_string"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.stub.hint_parm1"
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "self.stub.hint_string",
+        "self.stub.hint_parm1"
+      ]
+    },
+    {
+      "Name": "sethintstring",
+      "Arguments": [
+        "self.stub.hint_string"
+      ]
+    },
+    {
+      "Name": "setcursorhint",
+      "Arguments": [
+        "\"HINT_NOICON\""
+      ]
+    },
+    {
+      "Name": "trigger_visible_to_player",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.stub.trigger_target.grab_weapon_hint"
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "get_hint_string",
+      "Arguments": [
+        "self",
+        "\"default_treasure_chest\""
+      ]
+    },
+    {
+      "Name": "waittill_any",
+      "Arguments": [
+        "\"between_round_over\"",
+        "\"force_recapture_start\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"zone_capture_in_progress\""
+      ]
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_player_controlled_zone_count_for_recapture",
+      "Arguments": []
+    },
+    {
+      "Name": "randomintrange",
+      "Arguments": [
+        "3",
+        "6"
+      ]
+    },
+    {
+      "Name": "recapture_round_start",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "s_last_recapture_zone"
+      ]
+    },
+    {
+      "Name": "distancesquared",
+      "Arguments": [
+        "s_zone.origin",
+        "s_last_recapture_zone.origin"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "n_distance_closest"
+      ]
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "a_s_player_zones"
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "capture_event_handle_ai_limit",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_round_audio_starts",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "get_recapture_zone",
+      "Arguments": [
+        "s_recapture_target_zone"
+      ]
+    },
+    {
+      "Name": "recapture_event_start",
+      "Arguments": []
+    },
+    {
+      "Name": "monitor_recapture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "set_recapture_zombie_attack_target",
+      "Arguments": [
+        "s_recapture_target_zone"
+      ]
+    },
+    {
+      "Name": "generator_under_attack_warnings",
+      "Arguments": []
+    },
+    {
+      "Name": "ent_flag_set",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "hide_zone_objective_while_recapture_group_runs_to_next_generator",
+      "Arguments": [
+        "b_is_first_generator_attack"
+      ]
+    },
+    {
+      "Name": "activate_capture_zone",
+      "Arguments": [
+        "b_is_first_generator_attack"
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"current_recapture_target_zone\""
+      ]
+    },
+    {
+      "Name": "ent_flag",
+      "Arguments": [
+        "\"player_controlled\""
+      ]
+    },
+    {
+      "Name": "delay_thread",
+      "Arguments": [
+        "3",
+        "::broadcast_vo_category_to_team",
+        "\"recapture_started\""
+      ]
+    },
+    {
+      "Name": "recapture_event_end",
+      "Arguments": []
+    },
+    {
+      "Name": "handle_generator_capture",
+      "Arguments": []
+    },
+    {
+      "Name": "capture_event_handle_ai_limit",
+      "Arguments": []
+    },
+    {
+      "Name": "kill_all_recapture_zombies",
+      "Arguments": []
+    },
+    {
+      "Name": "recapture_round_audio_ends",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "n_delay"
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "get_random_speaker",
+      "Arguments": [
+        "a_players"
+      ]
+    },
+    {
+      "Name": "arrayremovevalue",
+      "Arguments": [
+        "a_players",
+        "e_speaker"
+      ]
+    },
+    {
+      "Name": "get_players_too_far_to_hear",
+      "Arguments": [
+        "a_players"
+      ]
+    },
+    {
+      "Name": "delay_thread",
+      "Arguments": [
+        "n_delay",
+        "::create_and_play_dialog",
+        "\"zone_capture\"",
+        "str_category"
+      ]
+    },
+    {
+      "Name": "distancesquared",
+      "Arguments": [
+        "player.origin",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "isplayeronsamemachine",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "a_players"
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "is_player_valid",
+      "Arguments": [
+        "player"
+      ]
+    },
+    {
+      "Name": "random",
+      "Arguments": [
+        "a_valid_players"
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"sndEndRoundLoop\""
+      ]
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "<<<vector_literal>>>"
+      ]
+    },
+    {
+      "Name": "playloopsound",
+      "Arguments": [
+        "\"mus_recapture_round_loop\"",
+        "5"
+      ]
+    },
+    {
+      "Name": "sndrecaptureroundloop_stop",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_wait",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "stoploopsound",
+      "Arguments": [
+        "2"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "array_removedead",
+      "Arguments": [
+        "level.zone_capture.recapture_zombies"
+      ]
+    },
+    {
+      "Name": "flag_set",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"recapture_event_in_progress\""
+      ]
+    },
+    {
+      "Name": "flag_clear",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "level.zone_capture.recapture_target"
+      ]
+    },
+    {
+      "Name": "ent_flag_clear",
+      "Arguments": [
+        "\"attacked_by_recapture_zombies\""
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.is_recapture_zombie"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self.attacker"
+      ]
+    },
+    {
+      "Name": "isplayer",
+      "Arguments": [
+        "self.attacker"
+      ]
+    },
+    {
+      "Name": "get_recapture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "delay_thread",
+      "Arguments": [
+        "2",
+        "::create_and_play_dialog",
+        "\"zone_capture\"",
+        "\"recapture_prevented\""
+      ]
+    },
+    {
+      "Name": "get_players",
+      "Arguments": []
+    },
+    {
+      "Name": "increment_client_stat",
+      "Arguments": [
+        "\"tomb_generator_defended\"",
+        "0"
+      ]
+    },
+    {
+      "Name": "increment_player_stat",
+      "Arguments": [
+        "\"tomb_generator_defended\""
+      ]
+    },
+    {
+      "Name": "get_recapture_zombies_needed",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "drop_max_ammo_at_death_location",
+      "Arguments": []
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "self"
+      ]
+    },
+    {
+      "Name": "groundtrace",
+      "Arguments": [
+        "<<<expression>>>",
+        "<<<expression>>>",
+        "0",
+        "undefined",
+        "1"
+      ]
+    },
+    {
+      "Name": "vectorscale",
+      "Arguments": [
+        "<<<vector_literal>>>",
+        "10.0"
+      ]
+    },
+    {
+      "Name": "vectorscale",
+      "Arguments": [
+        "<<<vector_literal>>>",
+        "150.0"
+      ]
+    },
+    {
+      "Name": "isdefined",
+      "Arguments": [
+        "v_powerup_origin"
+      ]
+    },
+    {
+      "Name": "specific_powerup_drop",
+      "Arguments": [
+        "\"full_ammo\"",
+        "v_powerup_origin"
+      ]
+    },
+    {
+      "Name": "flag_wait_any",
+      "Arguments": [
+        "\"generator_under_attack\"",
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"recapture_zombies_cleared\""
+      ]
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playloopsound",
+      "Arguments": [
+        "\"zmb_capturezone_losing\""
+      ]
+    },
+    {
+      "Name": "play_flare_effect",
+      "Arguments": []
+    },
+    {
+      "Name": "flag_waitopen",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "stoploopsound",
+      "Arguments": [
+        "0.2"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "endon",
+      "Arguments": [
+        "\"death\""
+      ]
+    },
+    {
+      "Name": "gettime",
+      "Arguments": []
+    },
+    {
+      "Name": "flag",
+      "Arguments": [
+        "\"generator_under_attack\""
+      ]
+    },
+    {
+      "Name": "playfx",
+      "Arguments": [
+        "level._effect",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "change_zombie_music",
+      "Arguments": [
+        "\"dog_start\""
+      ]
+    },
+    {
+      "Name": "sndrecaptureroundloop",
+      "Arguments": []
+    },
+    {
+      "Name": "change_zombie_music",
+      "Arguments": [
+        "\"dog_end\""
+      ]
+    },
+    {
+      "Name": "notify",
+      "Arguments": [
+        "\"sndEndRoundLoop\""
+      ]
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "\"vox_maxi_generator_initiate_0\"",
+        "\"vox_maxi_generator_initiate_0_done\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"vox_maxi_generator_initiate_0_done\""
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "\"vox_maxi_generator_process_complete_0\"",
+        "\"vox_maxi_generator_process_complete_0_done\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"vox_maxi_generator_process_complete_0_done\""
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "<<<expression>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "\"vox_maxi_generator_interrupted_0\"",
+        "\"vox_maxi_generator_interrupted_0_done\""
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "\"vox_maxi_generator_interrupted_0_done\""
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "<<<expression>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "spawn",
+      "Arguments": [
+        "\"script_origin\"",
+        "self.origin"
+      ]
+    },
+    {
+      "Name": "playsoundwithnotify",
+      "Arguments": [
+        "<<<expression>>>",
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "waittill",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    },
+    {
+      "Name": "delete",
+      "Arguments": []
+    },
+    {
+      "Name": "get_captured_zone_count",
+      "Arguments": []
+    },
+    {
+      "Name": "sndmusicstingerevent",
+      "Arguments": [
+        "<<<expression>>>"
+      ]
+    }
+  ],
+  "VariableAssignments": null
+}
