@@ -14,19 +14,14 @@ type Ast struct {
 	Nodes []p.Node `json:"ast"`
 }
 
-type FunctionSignature struct {
-	Name      string
-	Arguments []string
-}
-
-type FunctionCall struct {
+type Function struct {
 	Name      string
 	Arguments []string
 }
 
 type Output struct {
-	FunctionSignatures  []FunctionSignature
-	FunctionCalls       []FunctionCall
+	FunctionSignatures []Function
+	FunctionCalls      []Function
 }
 
 func main() {
@@ -66,17 +61,14 @@ func main() {
 
 	switch flag {
 	case "-f":
-		for _, fd := range GetAll(ast.Nodes, "function_declaration") {
-			functionSignature := FunctionSignature{fd.Data.FunctionName, ArgumentStrings(fd.Children[0].Children)}
-
-			output.FunctionSignatures = append(output.FunctionSignatures, functionSignature)
+		for _, f := range GetAllFunctions(ast.Nodes) {
+			switch f.Type {
+			case "function_call":
+				output.FunctionCalls = append(output.FunctionCalls, Function{f.Data.FunctionName, ArgumentStrings(f.Children)})
+			case "function_declaration":
+				output.FunctionSignatures = append(output.FunctionSignatures, Function{f.Data.FunctionName, ArgumentStrings(f.Children[0].Children)})
+			}
 		}
-		for _, fc := range GetAll(ast.Nodes, "function_call") {
-			functionCall := FunctionCall{fc.Data.FunctionName, ArgumentStrings(fc.Children)}
-
-			output.FunctionCalls = append(output.FunctionCalls, functionCall)
-		}
-
 	default:
 		fmt.Fprintf(os.Stderr, "Unknown flag: %v\nFlags:\n-f (Full analysis)\n", flag)
 		os.Exit(1)
@@ -113,15 +105,19 @@ func ArgumentStrings(arguments []p.Node) []string {
 	return output
 }
 
-func GetAll(nodes []p.Node, identifier string) []p.Node {
+func GetAllFunctions(nodes []p.Node) []p.Node {
+	functionNames := make(map[string]bool)
 	result := []p.Node{}
 
 	for _, node := range nodes {
-		if node.Type == identifier {
-			result = append(result, node)
+		if node.Type == "function_call" || node.Type == "function_declaration" {
+			if !functionNames[node.Data.FunctionName] {
+				functionNames[node.Data.FunctionName] = true
+				result = append(result, node)
+			}
 		}
 		if len(node.Children) > 0 {
-			result = append(result, GetAll(node.Children, identifier)...)
+			result = append(result, GetAllFunctions(node.Children)...)
 		}
 	}
 

@@ -732,42 +732,6 @@
       ]
     },
     {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"recapture_event_in_progress\""
-      ]
-    },
-    {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"capture_zones_init_done\""
-      ]
-    },
-    {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"recapture_zombies_cleared\""
-      ]
-    },
-    {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"generator_under_attack\""
-      ]
-    },
-    {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"all_zones_captured\""
-      ]
-    },
-    {
-      "Name": "flag_init",
-      "Arguments": [
-        "\"generator_lost_to_recapture_zombies\""
-      ]
-    },
-    {
       "Name": "setup_capture_zones",
       "Arguments": []
     },
@@ -775,12 +739,6 @@
       "Name": "precachemodel",
       "Arguments": [
         "\"p6_zm_tm_zone_capture_hole\""
-      ]
-    },
-    {
-      "Name": "precachemodel",
-      "Arguments": [
-        "\"p6_zm_tm_packapunch\""
       ]
     },
     {
@@ -796,60 +754,9 @@
       ]
     },
     {
-      "Name": "precachestring",
-      "Arguments": [
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "precachestring",
-      "Arguments": [
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "precachestring",
-      "Arguments": [
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "precachestring",
-      "Arguments": [
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
       "Name": "objective_add",
       "Arguments": [
         "0",
-        "\"invisible\"",
-        "<<<vector_literal>>>",
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "objective_add",
-      "Arguments": [
-        "1",
-        "\"invisible\"",
-        "<<<vector_literal>>>",
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "objective_add",
-      "Arguments": [
-        "2",
-        "\"invisible\"",
-        "<<<vector_literal>>>",
-        "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "objective_add",
-      "Arguments": [
-        "3",
         "\"invisible\"",
         "<<<vector_literal>>>",
         "<<<unary_expression>>>"
@@ -894,111 +801,11 @@
     {
       "Name": "registerclientfield",
       "Arguments": [
-        "\"actor\"",
-        "\"zone_capture_zombie\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"scriptmover\"",
-        "\"zone_capture_emergence_hole\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "\"zc_change_progress_bar_color\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "\"zone_capture_hud_all_generators_captured\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "\"zone_capture_perk_machine_smoke_fx_always_on\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "\"pap_monolith_ring_shake\"",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
         "\"world\"",
         "struct.script_noteworthy",
         "14000",
         "7",
         "\"float\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "<<<expression>>>",
-        "14000",
-        "3",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "<<<expression>>>",
-        "14000",
-        "2",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "<<<expression>>>",
-        "14000",
-        "1",
-        "\"int\""
-      ]
-    },
-    {
-      "Name": "registerclientfield",
-      "Arguments": [
-        "\"world\"",
-        "<<<expression>>>",
-        "14000",
-        "1",
-        "\"int\""
       ]
     },
     {
@@ -1150,12 +957,6 @@
       ]
     },
     {
-      "Name": "set_players_dontspeak",
-      "Arguments": [
-        "0"
-      ]
-    },
-    {
       "Name": "flag_clear",
       "Arguments": [
         "\"story_vo_playing\""
@@ -1280,34 +1081,6 @@
       ]
     },
     {
-      "Name": "set_attack_point_as_inaccessible",
-      "Arguments": [
-        "\"generator_start_bunker\"",
-        "11"
-      ]
-    },
-    {
-      "Name": "set_attack_point_as_inaccessible",
-      "Arguments": [
-        "\"generator_tank_trench\"",
-        "4"
-      ]
-    },
-    {
-      "Name": "set_attack_point_as_inaccessible",
-      "Arguments": [
-        "\"generator_tank_trench\"",
-        "5"
-      ]
-    },
-    {
-      "Name": "set_attack_point_as_inaccessible",
-      "Arguments": [
-        "\"generator_tank_trench\"",
-        "6"
-      ]
-    },
-    {
       "Name": "assert",
       "Arguments": [
         "<<<function_call>>>",
@@ -1324,13 +1097,6 @@
       "Name": "ent_flag_wait",
       "Arguments": [
         "\"zone_initialized\""
-      ]
-    },
-    {
-      "Name": "assert",
-      "Arguments": [
-        "<<<function_call>>>",
-        "<<<expression>>>"
       ]
     },
     {
@@ -1493,100 +1259,6 @@
       "Arguments": [
         "\"generator_start_bunker\"",
         "\"bunker_start_chest\""
-      ]
-    },
-    {
-      "Name": "register_random_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_tank_trench\"",
-        "\"trenches_right\""
-      ]
-    },
-    {
-      "Name": "register_mystery_box_for_zone",
-      "Arguments": [
-        "\"generator_tank_trench\"",
-        "\"bunker_tank_chest\""
-      ]
-    },
-    {
-      "Name": "register_random_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_mid_trench\"",
-        "\"trenches_left\""
-      ]
-    },
-    {
-      "Name": "register_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_mid_trench\"",
-        "\"sleight\"",
-        "\"vending_sleight\""
-      ]
-    },
-    {
-      "Name": "register_mystery_box_for_zone",
-      "Arguments": [
-        "\"generator_mid_trench\"",
-        "\"bunker_cp_chest\""
-      ]
-    },
-    {
-      "Name": "register_random_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_nml_right\"",
-        "\"nml\""
-      ]
-    },
-    {
-      "Name": "register_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_nml_right\"",
-        "\"juggernog\"",
-        "\"vending_jugg\""
-      ]
-    },
-    {
-      "Name": "register_mystery_box_for_zone",
-      "Arguments": [
-        "\"generator_nml_right\"",
-        "\"nml_open_chest\""
-      ]
-    },
-    {
-      "Name": "register_random_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_nml_left\"",
-        "\"farmhouse\""
-      ]
-    },
-    {
-      "Name": "register_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_nml_left\"",
-        "\"marathon\"",
-        "\"vending_marathon\""
-      ]
-    },
-    {
-      "Name": "register_mystery_box_for_zone",
-      "Arguments": [
-        "\"generator_nml_left\"",
-        "\"nml_farm_chest\""
-      ]
-    },
-    {
-      "Name": "register_random_perk_machine_for_zone",
-      "Arguments": [
-        "\"generator_church\"",
-        "\"church\""
-      ]
-    },
-    {
-      "Name": "register_mystery_box_for_zone",
-      "Arguments": [
-        "\"generator_church\"",
-        "\"village_church_chest\""
       ]
     },
     {
@@ -1904,13 +1576,6 @@
       ]
     },
     {
-      "Name": "assert",
-      "Arguments": [
-        "<<<unary_expression>>>",
-        "<<<expression>>>"
-      ]
-    },
-    {
       "Name": "isdefined",
       "Arguments": [
         "level.zone_capture.zones"
@@ -1935,13 +1600,6 @@
       ]
     },
     {
-      "Name": "assert",
-      "Arguments": [
-        "<<<function_call>>>",
-        "<<<expression>>>"
-      ]
-    },
-    {
       "Name": "isdefined",
       "Arguments": [
         "self.script_int"
@@ -1951,30 +1609,6 @@
       "Name": "ent_flag_init",
       "Arguments": [
         "\"attacked_by_recapture_zombies\""
-      ]
-    },
-    {
-      "Name": "ent_flag_init",
-      "Arguments": [
-        "\"current_recapture_target_zone\""
-      ]
-    },
-    {
-      "Name": "ent_flag_init",
-      "Arguments": [
-        "\"player_controlled\""
-      ]
-    },
-    {
-      "Name": "ent_flag_init",
-      "Arguments": [
-        "\"zone_contested\""
-      ]
-    },
-    {
-      "Name": "ent_flag_init",
-      "Arguments": [
-        "\"zone_initialized\""
       ]
     },
     {
@@ -2037,13 +1671,6 @@
       "Name": "sethintstring",
       "Arguments": [
         "<<<unary_expression>>>"
-      ]
-    },
-    {
-      "Name": "sethintstring",
-      "Arguments": [
-        "<<<unary_expression>>>",
-        "<<<function_call>>>"
       ]
     },
     {
@@ -2120,22 +1747,6 @@
         "self.origin",
         "0",
         "52"
-      ]
-    },
-    {
-      "Name": "add_attack_points_from_anchor_origin",
-      "Arguments": [
-        "<<<expression>>>",
-        "4",
-        "32"
-      ]
-    },
-    {
-      "Name": "add_attack_points_from_anchor_origin",
-      "Arguments": [
-        "<<<expression>>>",
-        "8",
-        "32"
       ]
     },
     {
@@ -2645,12 +2256,6 @@
       ]
     },
     {
-      "Name": "endon",
-      "Arguments": [
-        "\"recapture_event_in_progress\""
-      ]
-    },
-    {
       "Name": "waittill",
       "Arguments": [
         "\"zombies_attacking_generator\""
@@ -2777,22 +2382,6 @@
       "Arguments": [
         "refs",
         "\"right_leg\"",
-        "0"
-      ]
-    },
-    {
-      "Name": "arrayremovevalue",
-      "Arguments": [
-        "refs",
-        "\"left_leg\"",
-        "0"
-      ]
-    },
-    {
-      "Name": "arrayremovevalue",
-      "Arguments": [
-        "refs",
-        "\"no_legs\"",
         "0"
       ]
     },
@@ -3074,12 +2663,6 @@
       ]
     },
     {
-      "Name": "notify",
-      "Arguments": [
-        "\"zombie_acquire_enemy\""
-      ]
-    },
-    {
       "Name": "isdefined",
       "Arguments": [
         "self.attacking_point"
@@ -3152,12 +2735,6 @@
       "Name": "endon",
       "Arguments": [
         "\"generator_attack_cancel_think\""
-      ]
-    },
-    {
-      "Name": "endon",
-      "Arguments": [
-        "\"death\""
       ]
     },
     {
@@ -3247,12 +2824,6 @@
       "Name": "endon",
       "Arguments": [
         "\"death\""
-      ]
-    },
-    {
-      "Name": "endon",
-      "Arguments": [
-        "\"poi_state_changed\""
       ]
     },
     {
@@ -3498,29 +3069,9 @@
       ]
     },
     {
-      "Name": "setclientfield",
-      "Arguments": [
-        "<<<expression>>>",
-        "0"
-      ]
-    },
-    {
       "Name": "isdefined",
       "Arguments": [
         "self.perk_fx_func"
-      ]
-    },
-    {
-      "Name": "setclientfield",
-      "Arguments": [
-        "<<<expression>>>",
-        "1"
-      ]
-    },
-    {
-      "Name": "ent_flag_set",
-      "Arguments": [
-        "\"player_controlled\""
       ]
     },
     {
@@ -3566,13 +3117,6 @@
     {
       "Name": "wait_network_frame",
       "Arguments": []
-    },
-    {
-      "Name": "setclientfield",
-      "Arguments": [
-        "<<<expression>>>",
-        "0"
-      ]
     },
     {
       "Name": "ent_flag",
@@ -3626,20 +3170,6 @@
       "Arguments": [
         "<<<expression>>>",
         "n_hud_state"
-      ]
-    },
-    {
-      "Name": "setclientfield",
-      "Arguments": [
-        "<<<expression>>>",
-        "1"
-      ]
-    },
-    {
-      "Name": "setclientfield",
-      "Arguments": [
-        "<<<expression>>>",
-        "0"
       ]
     },
     {
@@ -4342,10 +3872,6 @@
       "Arguments": []
     },
     {
-      "Name": "wait_network_frame",
-      "Arguments": []
-    },
-    {
       "Name": "playfx",
       "Arguments": [
         "level._effect",
@@ -4603,20 +4129,8 @@
       ]
     },
     {
-      "Name": "showzbarrierpiece",
-      "Arguments": [
-        "1"
-      ]
-    },
-    {
       "Name": "magic_box_arrives",
       "Arguments": []
-    },
-    {
-      "Name": "showzbarrierpiece",
-      "Arguments": [
-        "1"
-      ]
     },
     {
       "Name": "magic_box_initial",
@@ -4630,30 +4144,12 @@
       ]
     },
     {
-      "Name": "showzbarrierpiece",
-      "Arguments": [
-        "2"
-      ]
-    },
-    {
       "Name": "magic_box_opens",
       "Arguments": []
     },
     {
-      "Name": "showzbarrierpiece",
-      "Arguments": [
-        "2"
-      ]
-    },
-    {
       "Name": "magic_box_closes",
       "Arguments": []
-    },
-    {
-      "Name": "showzbarrierpiece",
-      "Arguments": [
-        "1"
-      ]
     },
     {
       "Name": "magic_box_leaves",
@@ -4781,12 +4277,6 @@
       ]
     },
     {
-      "Name": "sethintstring",
-      "Arguments": [
-        "self.stub.hint_string"
-      ]
-    },
-    {
       "Name": "setcursorhint",
       "Arguments": [
         "\"HINT_NOICON\""
@@ -4893,12 +4383,6 @@
       ]
     },
     {
-      "Name": "flag_clear",
-      "Arguments": [
-        "\"generator_under_attack\""
-      ]
-    },
-    {
       "Name": "capture_event_handle_ai_limit",
       "Arguments": []
     },
@@ -4965,12 +4449,6 @@
       ]
     },
     {
-      "Name": "ent_flag_clear",
-      "Arguments": [
-        "\"current_recapture_target_zone\""
-      ]
-    },
-    {
       "Name": "ent_flag",
       "Arguments": [
         "\"player_controlled\""
@@ -4993,28 +4471,12 @@
       "Arguments": []
     },
     {
-      "Name": "capture_event_handle_ai_limit",
-      "Arguments": []
-    },
-    {
       "Name": "kill_all_recapture_zombies",
       "Arguments": []
     },
     {
       "Name": "recapture_round_audio_ends",
       "Arguments": []
-    },
-    {
-      "Name": "flag_clear",
-      "Arguments": [
-        "\"recapture_event_in_progress\""
-      ]
-    },
-    {
-      "Name": "flag_clear",
-      "Arguments": [
-        "\"generator_under_attack\""
-      ]
     },
     {
       "Name": "isdefined",
@@ -5163,12 +4625,6 @@
       "Name": "flag_clear",
       "Arguments": [
         "\"recapture_event_in_progress\""
-      ]
-    },
-    {
-      "Name": "flag_clear",
-      "Arguments": [
-        "\"generator_under_attack\""
       ]
     },
     {
@@ -5424,19 +4880,6 @@
       ]
     },
     {
-      "Name": "playsoundwithnotify",
-      "Arguments": [
-        "<<<expression>>>",
-        "<<<expression>>>"
-      ]
-    },
-    {
-      "Name": "waittill",
-      "Arguments": [
-        "<<<expression>>>"
-      ]
-    },
-    {
       "Name": "delete",
       "Arguments": []
     },
@@ -5522,6 +4965,5 @@
         "<<<expression>>>"
       ]
     }
-  ],
-  "VariableAssignments": null
+  ]
 }
