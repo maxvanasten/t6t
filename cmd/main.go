@@ -57,7 +57,7 @@ func main() {
 			os.Exit(1)
 		}
 	} else {
-		fmt.Fprintln(os.Stderr, "Usage: t6t -f ast.json")
+		fmt.Fprintln(os.Stderr, "Usage: t6t -f ast.json OR gscp -p input.gsc | t6t -f")
 		os.Exit(1)
 	}
 
