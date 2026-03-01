@@ -15,6 +15,7 @@
 # Clone the repo
 git clone https://maxvanasten/t6t
 cd t6t
+# Build the t6t binary
 go build -o ./t6t-bin ./cmd/main.go
 # Optional but recommended: move t6t binary into /usr/bin/ so its accessible from anywhere
 sudo mv ./t6t-bin /usr/bin/t6t
